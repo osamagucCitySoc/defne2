@@ -25,7 +25,6 @@
     return self;
 }
 
-
 - (void)viewWillAppear:(BOOL)animated {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productPurchased:) name:IAPHelperProductPurchasedNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productCanceled:) name:IAPHelperProductFailedNotification object:nil];
@@ -176,11 +175,9 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    
     NSDictionary* tweet = [dataSource objectAtIndex:[indexPath row]];
     
     [[cell textLabel]setText:[tweet objectForKey:@"text"]];
-    
     
     return cell;
 }
