@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="M6h-5K-qEJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="M6h-5K-qEJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -800,6 +800,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="1f3-ii-I4o">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.26509071210000001" green="0.61639011690000001" blue="0.71873007020000002" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
@@ -1064,7 +1065,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="2188" y="-552"/>
+            <point key="canvasLocation" x="1950" y="-583"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="aHS-DU-fz9">
@@ -1379,14 +1380,14 @@
             </objects>
             <point key="canvasLocation" x="2266" y="497"/>
         </scene>
-        <!--التغريدة-->
+        <!--إختر التغريدة-->
         <scene sceneID="346-bL-YzT">
             <objects>
                 <tableViewController id="Ate-Sg-PGu" customClass="TweetChoserViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="Nje-Sq-wrc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TweetCell" textLabel="L1p-kj-zDl" rowHeight="70" style="IBUITableViewCellStyleDefault" id="hdv-dr-Rlr">
                                 <rect key="frame" x="0.0" y="22" width="320" height="70"/>
@@ -1395,15 +1396,16 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" id="L1p-kj-zDl">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" id="L1p-kj-zDl">
                                             <rect key="frame" x="15" y="0.0" width="270" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1411,7 +1413,7 @@
                             <outlet property="delegate" destination="Ate-Sg-PGu" id="CbT-Q0-bwe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="التغريدة" id="BDO-Vk-zmn"/>
+                    <navigationItem key="navigationItem" title="إختر التغريدة" id="BDO-Vk-zmn"/>
                     <connections>
                         <outlet property="waitLabel" destination="zqw-Sp-hIB" id="bm3-25-6ju"/>
                         <outlet property="waitView" destination="bwS-2l-lO1" id="yJl-5W-KZt"/>
@@ -1421,7 +1423,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="wait-back.png" id="brX-Ky-LDX">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="wait-back-img.png" id="brX-Ky-LDX">
                             <rect key="frame" x="106" y="178" width="109" height="87"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -1441,7 +1443,7 @@
                 </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVN-kc-1FP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3040" y="-552"/>
+            <point key="canvasLocation" x="3127" y="-552"/>
         </scene>
     </scenes>
     <resources>
@@ -1476,7 +1478,6 @@
         <image name="unlimited-icon.png" width="48" height="48"/>
         <image name="vip-icon.png" width="65" height="65"/>
         <image name="wait-back-img.png" width="240" height="160"/>
-        <image name="wait-back.png" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -275,7 +275,7 @@
         [[FollowersExchangePurchase sharedInstance] buyProduct:productToBuy];
     }else
     {
-        UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"مكان التغريدة؟" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"الخط الزمني",@"المفضلات", nil];
+        UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"مكان التغريدة؟" delegate:self cancelButtonTitle:@"إلغاء" destructiveButtonTitle:nil otherButtonTitles:@"الخط الزمني",@"المفضلة", nil];
         [sheet setTag:111];
         [sheet showFromTabBar:self.tabBarController.tabBar];
     }
