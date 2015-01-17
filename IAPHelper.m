@@ -236,7 +236,7 @@ static SKPaymentTransaction* currentTrans;
     NSString *post = [NSString stringWithFormat:@"purchase=%@",string];
     
     NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
-    NSString *postLength = [NSString stringWithFormat:@"%d", [post length]];
+    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
     
     NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/validateMe2.php"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
@@ -372,7 +372,7 @@ static SKPaymentTransaction* currentTrans;
     NSString *post = [NSString stringWithFormat:@"name=%@&points=%@",[[UIDevice currentDevice] uniqueGlobalDeviceIdentifier],[[NSUserDefaults standardUserDefaults] stringForKey:@"points"]];
     
     NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
-    NSString *postLength = [NSString stringWithFormat:@"%d", [post length]];
+    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
     
     NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/FollowersExchange/updateMyPoints.php"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];

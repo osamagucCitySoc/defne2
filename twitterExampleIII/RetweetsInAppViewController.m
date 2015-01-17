@@ -235,7 +235,7 @@
         productToBuy = products[9];
     }else if(sender.tag == 10)
     {
-        productToBuy = products[11];
+        productToBuy = products[10];
     }
     
     ActionSheetCustomPicker* picker = [[ActionSheetCustomPicker alloc]initWithTitle:@"إختر الحساب" delegate:self showCancelButton:YES origin:sender];
@@ -244,7 +244,7 @@
 }
 
 #pragma mark picker view delegates
--(long) numberOfComponentsInPickerView:(UIPickerView *)pickerView
+-(NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
 }
@@ -292,7 +292,7 @@
     [products enumerateObjectsUsingBlock:^(SKProduct * product, NSUInteger idx, BOOL *stop) {
         UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"تم الشراء" message:@"تم الشراء شكرا لك." delegate:nil cancelButtonTitle:@"موافق" otherButtonTitles:nil];
         if ([product.productIdentifier isEqualToString:productIdentifier]) {
-            if([productIdentifier isEqualToString:@"arabdevs.followerExchange.r1"] || [productIdentifier isEqualToString:@"arabdevs.followerExchange.r2"] || [productIdentifier isEqualToString:@"arabdevs.followerExchange.r3"] || [productIdentifier isEqualToString:@"arabdevs.followerExchange.r4"])
+            if([productIdentifier isEqualToString:@"arabdevs.followerExchange.r1"])
             {
                 [self addActivityView];
                 NSString* name = [[accounts objectAtIndex:selectedTwitterAccount] username];

@@ -110,8 +110,8 @@
                       }
                       else {
                           // The server did not respond ... were we rate-limited?
-                          NSLog(@"The response status code is %d",
-                                urlResponse.statusCode);
+                          NSLog(@"The response status code is %ld",
+                                (long)urlResponse.statusCode);
                       }
                   }else {
                       // Access was not granted, or an error occurred
@@ -220,6 +220,67 @@
 -(void)hideWaitView
 {
     [_waitView removeFromSuperview];
+}
+
+
+#pragma mark - i got the event result of purchasing
+- (void)productPurchased:(NSNotification *)notification {
+    NSString * productIdentifier = notification.object;
+    [products enumerateObjectsUsingBlock:^(SKProduct * product, NSUInteger idx, BOOL *stop) {
+        UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"تم الشراء" message:@"تم الشراء شكرا لك." delegate:nil cancelButtonTitle:@"موافق" otherButtonTitles:nil];
+        if ([product.productIdentifier isEqualToString:productIdentifier]) {
+            if([productIdentifier isEqualToString:@"arabdevs.followerExchange.r2"] || [productIdentifier isEqualToString:@"arabdevs.followerExchange.r3"] || [productIdentifier isEqualToString:@"arabdevs.followerExchange.r4"])
+            {
+                [self showWaitViewWithText:nil];
+                
+                int retweets = 0;
+                if([productIdentifier isEqualToString:@"arabdevs.followerExchange.r2"])
+                {
+                    retweets = 100;
+                }else if([productIdentifier isEqualToString:@"arabdevs.followerExchange.r3"])
+                {
+                    retweets = 50;
+                }else
+                {
+                    retweets = 10;
+                }
+                
+                NSString* tweeID = [[NSUserDefaults standardUserDefaults]objectForKey:@"tweetID"];
+                NSString* tweeTEXT = [[NSUserDefaults standardUserDefaults]objectForKey:@"tweetTEXT"];
+                NSString* tweeUSER = [[NSUserDefaults standardUserDefaults]objectForKey:@"tweetUSER"];
+                
+                NSString *post = [NSString stringWithFormat:@"tweetID=%@&retweets=%i&tweetTEXT=%@&tweetUSER=%@",tweeID,retweets,tweeTEXT,tweeUSER];
+                
+                NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
+                NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
+                
+                NSURL *url = [NSURL URLWithString:@"http://moh2013.com/retweetly/retweetByRetweetsVIP.php"];
+                NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
+                [request setHTTPMethod:@"POST"];
+                
+                [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+                
+                [request setHTTPBody:postData];
+                
+                NSURLConnection* pointsConnection = [[NSURLConnection alloc]initWithRequest:request delegate:nil    startImmediately:NO];
+                
+                [pointsConnection scheduleInRunLoop:[NSRunLoop mainRunLoop]
+                                            forMode:NSDefaultRunLoopMode];
+                [pointsConnection start];
+
+                *stop = YES;
+                OLGhostAlertView* alert = [[OLGhostAlertView alloc]initWithTitle:@"شكرا" message:@"سوف تتمتع  تغريدتك بالعدد المطلوب للريتويت بعد قليل" timeout:5 dismissible:YES];
+                [alert show];
+            }
+            *stop = YES;
+            [alert show];
+        }
+    }];
+}
+
+- (void)productCanceled:(NSNotification *)notification
+{
+    productToBuy = nil;
 }
 
 

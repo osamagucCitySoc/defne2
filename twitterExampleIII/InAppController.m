@@ -255,7 +255,7 @@
                 NSString *post = [NSString stringWithFormat:@"name=%@", name];
                 
                 NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
-                NSString *postLength = [NSString stringWithFormat:@"%d", [post length]];
+                NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
                 
                 NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/DefneAdefak/makeBuyFollower0.php"];
                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
@@ -278,7 +278,7 @@
                 NSString *post = [NSString stringWithFormat:@"name=%@", name];
                 
                 NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
-                NSString *postLength = [NSString stringWithFormat:@"%d", [post length]];
+                NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
                 
                 NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/DefneAdefak/makeBuyFollowers.php"];
                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
@@ -300,7 +300,7 @@
                 NSString *post = [NSString stringWithFormat:@"name=%@", name];
                 
                 NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
-                NSString *postLength = [NSString stringWithFormat:@"%d", [post length]];
+                NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
                 
                 NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/DefneAdefak/makeBuyFollowers2.php"];
                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
@@ -322,7 +322,7 @@
                 NSString *post = [NSString stringWithFormat:@"name=%@", name];
                 
                 NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
-                NSString *postLength = [NSString stringWithFormat:@"%d", [post length]];
+                NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
                 
                 NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/DefneAdefak/makeBuyFollowers3.php"];
                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
@@ -344,7 +344,7 @@
                 NSString *post = [NSString stringWithFormat:@"name=%@&apn=%@", name,[[NSUserDefaults standardUserDefaults]objectForKey:@"deviceToken"]];
                 
                 NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
-                NSString *postLength = [NSString stringWithFormat:@"%d", [post length]];
+                NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
                 
                 NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/DefneAdefak/V2/makeMeAlwaysOnline.php"];
                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
@@ -365,7 +365,7 @@
                 NSString *post = [NSString stringWithFormat:@"name=%@", name];
                 
                 NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
-                NSString *postLength = [NSString stringWithFormat:@"%d", [post length]];
+                NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
                 
                 NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/DefneAdefak/makeAutoFollowZ.php"];
                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
@@ -387,7 +387,7 @@
                 NSString *post = [NSString stringWithFormat:@"name=%@", name];
                 
                 NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
-                NSString *postLength = [NSString stringWithFormat:@"%d", [post length]];
+                NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
                 
                 NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/DefneAdefak/makeNoFB.php"];
                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
@@ -433,7 +433,7 @@
 
 
 #pragma mark picker view delegates
--(int) numberOfComponentsInPickerView:(UIPickerView *)pickerView
+-(NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
 }
@@ -449,7 +449,7 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    selectedTwitterAccount = row;
+    selectedTwitterAccount = (int)row;
     
 }
 
