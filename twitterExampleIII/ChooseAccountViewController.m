@@ -484,13 +484,33 @@ bool showw = YES;
 }
 
 #pragma mark - Table view delegate
+- (BOOL)checkInternetWithDataWithThread{
+    return [self checkInternetWithData];
+}
 
+- (BOOL)checkInternetWithData{
+    BOOL returnBool = YES;
+    
+    NSURLRequest *request =[[NSURLRequest alloc]initWithURL:[NSURL URLWithString:@"http://www.google.com"]];
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL];
+    if (data == nil) {
+        returnBool = NO;
+    }
+    return returnBool;
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    selected = (int)[indexPath row];
-    [[NSUserDefaults standardUserDefaults]setValue:[NSString stringWithFormat:@"%i",selected] forKey:@"accountIndex"];
-    [[NSUserDefaults standardUserDefaults]setValue:[[accounts objectAtIndex:selected] username] forKey:@"accountName"];
-    [self performSegueWithIdentifier:@"mainSeg" sender:self];
+    if([self checkInternetWithData])
+    {
+        selected = (int)[indexPath row];
+        [[NSUserDefaults standardUserDefaults]setValue:[NSString stringWithFormat:@"%i",selected] forKey:@"accountIndex"];
+        [[NSUserDefaults standardUserDefaults]setValue:[[accounts objectAtIndex:selected] username] forKey:@"accountName"];
+        [self performSegueWithIdentifier:@"mainSeg" sender:self];
+    }else
+    {
+        OLGhostAlertView* alert = [[OLGhostAlertView alloc]initWithTitle:@"عفوا" message:@"يجب أن تكون متصل بالإنترنت" timeout:3 dismissible:YES];
+        [alert show];
+    }
 }
 
 

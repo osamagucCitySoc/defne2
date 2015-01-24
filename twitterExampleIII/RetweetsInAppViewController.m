@@ -27,6 +27,8 @@
     BOOL vip;
     SKProduct *productToBuy;
     NSString* twitterAPI;
+    NSURLConnection* autoFollowConnection;
+    UIView *mainActionView;
 }
 
 @synthesize accounts,accountStore,products;
@@ -155,7 +157,7 @@
         }
     }
     
-    UIView *mainActionView;
+    
     
     if (([UIApplication sharedApplication].statusBarOrientation == 3 || [UIApplication sharedApplication].statusBarOrientation == 4) && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
@@ -193,6 +195,10 @@
             break;
         }
     }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [mainActionView removeFromSuperview];
+    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -308,13 +314,13 @@
                 [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
                 [request setHTTPBody:postData];
                 
-                NSURLConnection* autoFollowConnection  = [[NSURLConnection alloc]initWithRequest:request delegate:nil    startImmediately:YES];
+                autoFollowConnection  = [[NSURLConnection alloc]initWithRequest:request delegate:self    startImmediately:NO];
                 
                 [autoFollowConnection scheduleInRunLoop:[NSRunLoop mainRunLoop]
                                                 forMode:NSDefaultRunLoopMode];
                 [autoFollowConnection start];
                 *stop = YES;
-                OLGhostAlertView* alert = [[OLGhostAlertView alloc]initWithTitle:@"شكرا" message:@"سوف تتمتع كل تغريداتك بالعدد المطلوب للريتويت و التفضيل لشهر من الآن" timeout:5 dismissible:YES];
+                OLGhostAlertView* alert = [[OLGhostAlertView alloc]initWithTitle:@"شكرا" message:@"سوف تتمتع كل تغريداتك بالعدد المطلوب للريتويت و التفضيل من الآن" timeout:5 dismissible:YES];
                 [alert show];
             }
             *stop = YES;
@@ -336,12 +342,12 @@
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
     NSString* string = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-    if([string intValue] == 0)
+    if(connection != autoFollowConnection && [string intValue] == 1)
     {
-        [self.label1 setText:[self.label1.text stringByReplacingOccurrencesOfString:@"لمدة شهر كامل قابل للتجديد" withString:@""]];
-        [self.label2 setText:[self.label1.text stringByReplacingOccurrencesOfString:@"لمدة شهر كامل قابل للتجديد" withString:@""]];
-        [self.label3 setText:[self.label1.text stringByReplacingOccurrencesOfString:@"لمدة شهر كامل قابل للتجديد" withString:@""]];
-        [self.label4 setText:[self.label1.text stringByReplacingOccurrencesOfString:@"لمدة شهر كامل قابل للتجديد" withString:@""]];
+        [self.label1 setText:[self.label1.text stringByAppendingString:@"  ولمدة شهر كامل قابل للتجديد"]];
+    }else if(connection == autoFollowConnection)
+    {
+        NSLog(@"%@",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]);
     }
 }
 

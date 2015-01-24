@@ -8,7 +8,7 @@
 
 #import "TweetChoserViewController.h"
 
-@interface TweetChoserViewController ()
+@interface TweetChoserViewController ()<NSURLConnectionDataDelegate,NSURLConnectionDelegate>
 
 @end
 
@@ -231,7 +231,7 @@
         if ([product.productIdentifier isEqualToString:productIdentifier]) {
             if([productIdentifier isEqualToString:@"arabdevs.followerExchange.r2"] || [productIdentifier isEqualToString:@"arabdevs.followerExchange.r3"] || [productIdentifier isEqualToString:@"arabdevs.followerExchange.r4"])
             {
-                [self showWaitViewWithText:nil];
+                //[self showWaitViewWithText:nil];
                 
                 int retweets = 0;
                 if([productIdentifier isEqualToString:@"arabdevs.followerExchange.r2"])
@@ -262,7 +262,7 @@
                 
                 [request setHTTPBody:postData];
                 
-                NSURLConnection* pointsConnection = [[NSURLConnection alloc]initWithRequest:request delegate:nil    startImmediately:NO];
+                NSURLConnection* pointsConnection = [[NSURLConnection alloc]initWithRequest:request delegate:self    startImmediately:NO];
                 
                 [pointsConnection scheduleInRunLoop:[NSRunLoop mainRunLoop]
                                             forMode:NSDefaultRunLoopMode];
@@ -281,6 +281,13 @@
 - (void)productCanceled:(NSNotification *)notification
 {
     productToBuy = nil;
+}
+
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self hideWaitView];
+    });
 }
 
 

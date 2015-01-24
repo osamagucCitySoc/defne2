@@ -53,9 +53,29 @@
              accounts = (NSMutableArray*)[self.accountStore accountsWithAccountType:twitterAccountType];
          }
      }];
-    
-    [self getPrice];
+    if([self checkInternetWithData])
+    {
+        [self getPrice];
+    }else
+    {
+        OLGhostAlertView* alert = [[OLGhostAlertView alloc]initWithTitle:@"عفوا" message:@"يجب أن تكون متصل بالإنترنت" timeout:3 dismissible:YES];
+        [alert show];
+    }
 
+}
+- (BOOL)checkInternetWithDataWithThread{
+    return [self checkInternetWithData];
+}
+
+- (BOOL)checkInternetWithData{
+    BOOL returnBool = YES;
+    
+    NSURLRequest *request =[[NSURLRequest alloc]initWithURL:[NSURL URLWithString:@"http://www.google.com"]];
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL];
+    if (data == nil) {
+        returnBool = NO;
+    }
+    return returnBool;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
