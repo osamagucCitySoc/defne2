@@ -1,0 +1,1427 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="M6h-5K-qEJ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="JRy-Ek-FL1">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="M6h-5K-qEJ" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="RcK-pq-AhC">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.26509071210000001" green="0.61639011690000001" blue="0.71873007020000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0ku-vS-GRU" kind="relationship" relationship="rootViewController" id="0z8-jx-dTM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eGe-hB-A5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-755" y="31"/>
+        </scene>
+        <!--اختر حساباً-->
+        <scene sceneID="MJr-w8-QKO">
+            <objects>
+                <tableViewController id="0ku-vS-GRU" customClass="ChooseAccountViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="25" sectionFooterHeight="22" id="nbL-vl-xt6">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="cIm-y3-0b1">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="70" id="pp0-vG-19g">
+                                <rect key="frame" x="0.0" y="25" width="320" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pp0-vG-19g" id="hxq-oC-LGQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="اختر حساباً" id="Ugu-EZ-zwj">
+                        <barButtonItem key="leftBarButtonItem" image="about-img.png" id="fWu-qj-7gR">
+                            <connections>
+                                <action selector="openAbout:" destination="0ku-vS-GRU" id="zR2-7l-FES"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="الخدمات" id="trO-Bh-W1L">
+                            <connections>
+                                <segue destination="9Sl-Ud-vn1" kind="push" id="Cr6-X6-YYj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="aboutController" destination="eSJ-bE-ajQ" id="a3Y-DA-Vsx"/>
+                        <outlet property="adView" destination="cIm-y3-0b1" id="bh7-38-jgf"/>
+                        <outlet property="helpButton" destination="PQB-Jt-9zD" id="Gft-zw-Yvw"/>
+                        <outlet property="helpImage" destination="OTT-1Q-g2r" id="XJg-gf-4YL"/>
+                        <outlet property="mainWaitView" destination="TaZ-dF-zpt" id="CRd-RG-XIa"/>
+                        <outlet property="topAboutButton" destination="fWu-qj-7gR" id="1xq-m8-JGO"/>
+                        <outlet property="topBuyButton" destination="trO-Bh-W1L" id="MyG-rB-XG0"/>
+                        <segue destination="7Vm-8V-zfM" kind="push" identifier="mainSeg" id="bZd-Cx-Okw"/>
+                        <segue destination="HBY-o9-xf1" kind="modal" identifier="licenceSeg" modalTransitionStyle="coverVertical" id="AJc-NH-Rwf"/>
+                        <segue destination="oUE-vo-Jlv" kind="modal" identifier="newSeg" modalTransitionStyle="coverVertical" id="bdd-4r-e84"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9tl-Xx-Zls" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="eSJ-bE-ajQ" customClass="AboutViewController"/>
+                <view contentMode="scaleToFill" id="TaZ-dF-zpt" userLabel="mainWaitView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ga5-IE-Xw9">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="569"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="wait-back-img.png" id="nCp-lp-gyp">
+                            <rect key="frame" x="40" y="155" width="240" height="160"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="whiteLarge" id="2DA-b5-JxJ">
+                            <rect key="frame" x="142" y="183" width="37" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <color key="color" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="جاري تحميل الحسابات الرجاء الإنتظار" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dch-vA-UtN">
+                            <rect key="frame" x="73" y="241" width="174" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help-back.png" id="OTT-1Q-g2r">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PQB-Jt-9zD">
+                    <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeHelp:" destination="0ku-vS-GRU" eventType="touchUpInside" id="cjc-uz-Eap"/>
+                    </connections>
+                </button>
+            </objects>
+            <point key="canvasLocation" x="-192" y="31"/>
+        </scene>
+        <!--Licence View Controller-->
+        <scene sceneID="DrA-Lt-25o">
+            <objects>
+                <viewController id="HBY-o9-xf1" customClass="licenceViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jd0-5X-cE2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="qgA-T1-ydn">
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">اتفاقية ترخيص البرامج 
+
+يرصد هذا الترخيص البرامج بنسبة (مطورون العرب)، إلى العميل باعتباره عنصرا أساسيا من الخدمات التي ستقدمها (مطورون العرب) كما هو محدد في مواصفات نظام وأية وثائق ذات الصلة والاتفاق. يجب نظام يعني المنتج تسليم كما هو محدد في هذه الوثائق.
+
+العملاء و(مطورون العرب) توافق على أن هذا الترخيص البرامج يعتبر أن تكون جزءا من، ويخضع لشروط الاتفاق التي تنطبق على كلا الطرفين.
+
+القسم 1 ترخيص والملكية
+
+1.1 (مطورون العرب) بموجب هذا المنح إلى العملاء في جميع أنحاء العالم، ودائم، غير حصرية، رخصة غير قابلة للتحويل إلى جميع البرامج للاستخدام الزبون في اتصال مع إنشاء واستخدام وصيانة وتعديل نظام تنفذها (مطورون العرب). يجب البرمجيات يعني قانون قابل للتنفيذ الكائن من البرامج والبقع، ومخطوطات، والتعديلات، والتحسينات، والتصميمات والمفاهيم أو غيرها من المواد التي تشكل البرامج اللازمة لوظيفة مناسبة وتشغيل النظام كما سلمت من قبل (مطورون العرب) وقبلت من قبل العميل. 
+1.2 باستثناء ما المنصوص عليها صراحة في هذه الفقرة، (مطورون العرب) في جميع الأوقات تملك جميع حقوق الملكية الفكرية في البرمجيات. يجب أن يتم تسليم أي وكافة التراخيص والضمانات المنتج أو عقود الخدمة التي تقدمها أطراف ثالثة في اتصال مع أي البرمجيات والأجهزة أو غيرها من البرامج أو الخدمات المقدمة في النظام لالعملاء لصالح الوحيد من العملاء. 
+1.3 العملاء يمكن أن يقدم إلى (المشروعات الإنمائية ARAB) أو السماح لل(مطورون العرب) لاستخدام بعض المعلومات السرية، بما في ذلك علامات الخدمة، والشعارات، والرسومات، والبرمجيات والوثائق والمعلومات التجارية والخطط التي تم تأليفها أو قبل المملوكة من قبل العملاء. تظل جميع الملكية الفكرية مثل ملكية حصرية من العملاء، ويجب ألا يتم استخدامها من قبل (المشروعات الإنمائية ARAB) عن أي أغراض أخرى غير تلك التي ترتبط مع التسليم للنظام.
+
+القسم 2 نسخ، وتعديل، واستخدم
+
+قد جعل العملاء 2.1 نسخ من البرنامج لأغراض الأرشفة وكما هو مطلوب لإدخال تعديلات على النظام. تظل جميع نسخ وتوزيع البرنامج ضمن السيطرة المباشرة من العملاء وممثليها. 
+2.2 يجوز العملاء إجراء تعديلات على النسخة شفرة المصدر من البرنامج، إذا وفقط إذا تم تطبيق نتائج جميع هذه التعديلات فقط إلى النظام. بأي حال من الأحوال لا يمنح هذا الترخيص البرامج أي حق في خدمة العملاء لرخصة أو إعادة ترخيص أو بيع، أو يأذن إلا فإن استخدام البرمجيات، سواء كانت في شكل قابل للتنفيذ، وشفرة المصدر أو غير ذلك، بأي والثالث 
+الأطراف، ما عدا في اتصال مع استخدام النظام كجزء من الأعمال الزبون. 
+2.3 المشروعات الإنمائية العربي لديه الحق في الإعلان عن نفسها عندما تحصل أتباع منها. 
+2.4 المتابعة السيارات هو الاشتراك الأسبوعية. 
+يعتبر 2.5 جميع الضمانات الصريحة أو الضمنية المتعلقة البرنامج لاغيا وباطلا في حال وجود أي تعديل على البرنامج الذي أدلى به أي طرف آخر من (مطورون العرب).
+
+بعد ما يتم موافقتك علي هذي الشروط يحق لمطورين العرب بأن يتم نشر اعلان من خلال حسابك في تويتر الذي مشترك فيه. بنشره وحده شهريا (دعايه للتطبيق فقط ولا يحق لنا غير الدعايه)
+
+القسم 3 الضمانات والتأكيدات
+
+(مطورون العرب) ويضمن للعميل ما يلي:
+
+3.1 لديها جميع الحقوق والصلاحيات اللازمة لتنفيذ وإنجاز هذا الترخيص البرامج وتنفيذ التزاماتها بموجب هذه الاتفاقية ومنح الحقوق الممنوحة بموجب هذا الترخيص البرامج إلى العملاء؛ 
+3.2 البضائع والخدمات المقدمة من قبل المقاول بموجب هذا الترخيص البرامج، بما في ذلك البرمجيات وجميع الملكية الفكرية المقدمة بموجب هذه الاتفاقية، هي النسخة الأصلية ل(مطورون العرب) أو المتعاقدين من الباطن أو الشركاء؛ و 
+سوف 3.3 البرنامج، كما سلمت كجزء من النظام، وليس تنتهك أو تنتهك حقوق أي طرف ثالث، أو تنتهك أي قانون معمول به أو قاعدة أو تنظيم. 
+3.4 (مطورون العرب) يمثل زيادة ويضمن، في جميع أنحاء نظام فترة الضمان، رمز الكائن القابل للتنفيذ من البرامج ونظام سوف تؤدي بشكل كبير وفقا لمواصفات النظام والاتفاق. إذا فشل هذا البرنامج في أداء مهامها على النحو المحدد وتقبل جميع سبل الانتصاف عملا السياسات المنصوص عليها في المواصفات والاتفاق. يتم توفير أي ضمان من أي نوع أو طبيعة لإصدار الكود المصدري للبرنامج والتي يتم تسليمها كما هو. 
+3.5 باستثناء ما هو منصوص عليه صراحة في هذه الاتفاقية، لا توجد ضمانات، صريحة أو ضمنية، بما في ذلك، ولكن ليس على سبيل الحصر، الضمانات الضمنية الخاصة الملاءمة لغرض معين، للتسويق، أو ضمان من أي انتهاك لحقوق الملكية الفكرية طرف ثالث
+٣.٦ يكون الشراء الفولو التلقائي بالإسبوع و يتم دعم الحساب.القسم 4 التعويض
+
+4.1 (مطورون العرب) فهو يعوض بموجبه ويجب الدفاع عنها وعقد العملاء غير مؤذية، شركاتها الأم ولها وفروعها والشركات التابعة لها، والضباط والمديرين والموظفين والوكلاء والمقاولين من الباطن من وضد كل المسؤولية والأضرار والخسائر، التكاليف أو النفقات، بما في ذلك ولكن لا تقتصر على أتعاب ونفقات المحاماة المعقولة، الناتجة عن أو فيما يتعلق بأي خرق أو انتهاك مزعوم لاتفاق أو أي مطالبات الطرف الثالث أن البرنامج أو نظام هنا تقدمها (مطورون العرب) يخالف أو ينتهك حقوق أي خلاف ذلك من أي طرف ثالث من هذا القبيل. 
+4.2 العملاء يعوض بموجبه ويجب الدفاع عنها والمحافظة (مطورون العرب)، وفروعها، وفروعها، والضباط والمديرين والموظفين والوكلاء والمقاولين من الباطن من وضد كل المسؤولية والأضرار والخسائر، التكاليف أو النفقات، بما في ذلك سبيل المثال لا الحصر أتعاب المحاماة المعقولة والمصاريف، والتي تنشأ عن أو فيما يتعلق بأي طرف ثالث يدعي أن استخدام العميل للبرنامج في مخالفة لمنح حقوق يخالف أو ينتهك حقوق أي خلاف من أي طرف ثالث من هذا القبيل. 
+4.3 بناء على تأكيد من أي مطالبة أو بدء أي دعوى أو إجراءات ضد مستحقي التعويض من قبل أي طرف ثالث قد تؤدي إلى المسؤولية من indemnitor أدناه، يجب على مستحقي التعويض على الفور بإخطار indemnitor من وجود مثل هذه المطالبة ويعطون فرصة معقولة للدفاع عن indemnitor وتسوية المطالبة على نفقته الخاصة ومع محام من اختياره الخاص. يجب على مستحقي التعويض التعاون مع indemnitor، في جميع الأوقات لديك الحق الكامل في المشاركة في مثل هذا الدفاع على نفقته الخاصة، ويجب ألا تكون ملزمة، ضد موافقتها، للمشاركة في أي تسوية التي يعتقد بشكل معقول أن يكون لها تأثير ضار على أعمالها.
+
+القسم 5 نقلهم وإنهاء خدمتهم
+
+وهذا الترخيص تنهي تلقائيا بناء على التفكيك من النظام المذكور أعلاه، ما لم يتم إعادة تجميعها في نظام التكوين الأصلي في موقع آخر.
+
+(مطورون العرب) قد إنهاء هذا الترخيص بناء على إشعار لعدم الامتثال لأي من الشروط المنصوص عليها في هذا الترخيص البرامج. عند انتهاء، ويلتزم العميل على الفور بتدمير البرنامج، بما في ذلك جميع نسخ والتعديلات...</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="o0X-JW-Ju7">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="J9n-98-ki0"/>
+                                    <barButtonItem title="موافق" id="NPj-8m-xhe">
+                                        <color key="tintColor" red="0.26509071210000001" green="0.61639011690000001" blue="0.71873007020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="dismiss:" destination="HBY-o9-xf1" id="MZc-cO-WU6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" id="1Zl-jD-Ojd">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.26509071210000001" green="0.61639011690000001" blue="0.71873007020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="ترخيص البرامج " id="nfj-pF-2ED"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3IZ-10-QvZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.26509071210000001" green="0.61639011690000001" blue="0.71873007020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6di-pW-Kx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="500" y="1149"/>
+        </scene>
+        <!--Rules View Controller-->
+        <scene sceneID="UAe-NW-IK3">
+            <objects>
+                <viewController id="oUE-vo-Jlv" customClass="RulesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Klj-zZ-8QI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-background.png" id="hkK-y7-UUv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="569"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pwc-nX-XYz">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.10000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3Wg-Of-3Dg">
+                                        <rect key="frame" x="0.0" y="30" width="320" height="78"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.35171241035039896" green="0.76692000679347827" blue="0.45871096721836541" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الإصدار: 5.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FcL-M6-rUy">
+                                        <rect key="frame" x="0.0" y="446" width="320" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.82817328990000005" green="0.83504065689999996" blue="0.83468652300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diamond-icon.png" id="9ep-gG-1B4">
+                                        <rect key="frame" x="260" y="488" width="48" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إضافة ميزة الفولو الماسي والتي تعد أقوى مزايا التطبيق." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4W9-xg-Q0k">
+                                        <rect key="frame" x="13" y="484" width="234" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الإصدار: 6.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kBc-px-Bj1">
+                                        <rect key="frame" x="0.0" y="108" width="320" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.82817328990000005" green="0.83504065689999996" blue="0.83468652300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الإصدار: 6.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1G3-bs-PdS">
+                                        <rect key="frame" x="0.0" y="216" width="320" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.82817328990000005" green="0.83504065689999996" blue="0.83468652300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="true-icon.png" id="ZIa-fj-o3Q">
+                                        <rect key="frame" x="260" y="258" width="48" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إعادة المتابعة اللحظية، الآن بمجرد أن تتابع أحد سيتابعك بنفس اللحظة." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dUZ-zA-Arv">
+                                        <rect key="frame" x="13" y="254" width="234" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new-no-back.png" id="RaH-hI-T6J">
+                                        <rect key="frame" x="260" y="151" width="48" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إعادة ميزة عدم الفولو باك، وللاشتراك بها اذهب الى قسم &quot;الخدمات&quot;." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Sp-ds-exE">
+                                        <rect key="frame" x="13" y="147" width="234" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الإصدار: 6.2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VTf-yG-Ohb">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.82817328990000005" green="0.83504065689999996" blue="0.83468652300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new-buy-icon.png" id="NXJ-br-EO2">
+                                        <rect key="frame" x="260" y="43" width="48" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إضافة خدمة الريتويت + التفضيل + الردود + الإقتباس لتغريداتك." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pka-Ug-Fgf">
+                                        <rect key="frame" x="13" y="39" width="234" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ios8-icon.png" id="rZc-xu-S0d">
+                                        <rect key="frame" x="260" y="322" width="48" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دعم كامل لإصدار أبل الجديد IOS 8 وإصلاح بعض الأخطاء." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ezL-IN-Wv3">
+                                        <rect key="frame" x="13" y="318" width="234" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unlimited-icon.png" id="iuW-ZG-Mwp">
+                                        <rect key="frame" x="260" y="386" width="48" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تحسينات عامة في تصميم التطبيق وتحسين واجهة المستخدم." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eUX-GU-8lv">
+                                        <rect key="frame" x="13" y="382" width="234" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" id="ULV-6h-did">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.71372549019607845" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="الجديد في هذه النسخة" id="Qbt-QC-GOS">
+                                        <barButtonItem key="rightBarButtonItem" title="إغلاق" style="done" id="qtK-xU-fMB">
+                                            <color key="tintColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="closeTheView:" destination="oUE-vo-Jlv" id="adY-2E-ogv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dic-el-24H">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.71372549019999998" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="scrollView" destination="Pwc-nX-XYz" id="Upc-kD-oCS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rpo-Do-Vbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-224" y="-896"/>
+        </scene>
+        <!--الخدمات-->
+        <scene sceneID="9qa-zN-fD3">
+            <objects>
+                <viewController id="9Sl-Ud-vn1" customClass="InAppController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z8q-Wn-bNf">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-background.png" id="y2v-2H-8hE">
+                                <rect key="frame" x="0.0" y="-65" width="320" height="569"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="b9e-mC-Bhl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d-icon.png" id="31V-wp-oV5">
+                                        <rect key="frame" x="242" y="25" width="65" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gLL-cI-OTi">
+                                        <rect key="frame" x="14" y="98" width="293" height="169"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">الفولو الماسي هو أقوى مزايا التطبيق وأكثرها كسباً للمتابعين، فهو يجمع بين الفولو التلقائي والفولو اللحظي كما أن المشترك بهذه الميزة سيظهر حسابه دائماً في مقدمة الحسابات بحيث تكون له الأولوية المطلقة في المتابعة، الاشتراك مدته ١٤ يوماً ويلزم تجديد الإشتراك بعد ذلك، وأقل عدد متابعين ممكن كسبه هو ٥٠٠٠ متابع كحد أدنى وممكن أن تصل لأكثر بكثير من ١٠ الاف متابع حقيقي خلال مدة الإشتراك. مع ميزه عدم فولو باك التي تتيح أن تضغط تابع و الناس تتابعك من دون أن تتابعهم.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0hQ-6I-stw">
+                                        <rect key="frame" x="0.0" y="341" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.3020928376" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8iC-Ub-t91">
+                                        <rect key="frame" x="0.0" y="622" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.3020928376" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Td1-jI-Hk2">
+                                        <rect key="frame" x="33" y="280" width="255" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="شراء" backgroundImage="buy1-button.png">
+                                            <color key="titleColor" white="0.37078010950000001" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyNow:" destination="9Sl-Ud-vn1" eventType="touchUpInside" id="W6K-er-xxq"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a-icon.png" id="0GW-2O-elW">
+                                        <rect key="frame" x="242" y="367" width="65" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q5e-45-PRw">
+                                        <rect key="frame" x="-16" y="375" width="242" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">الفولو التلقائي +
+ عدم فولوباك</string>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gFO-fb-gox">
+                                        <rect key="frame" x="14" y="432" width="293" height="116"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">عند شراءك لهذه الميزة ستقوم جميع الحسابات المشتركة في التطبيق بمتابعتك تلقائياً دون أن تتابعهم (دون عناء الضغط على زر تابع) وكل هذا يتم والتطبيق مغلق، وبالتالي سوف تكسب عدد متابعين هائل جداً، ودون أي تدخل منك. مع ميزه عدم فولو باك التي تتيح أن تضغط تابع و الناس تتابعك من دون أن تتابعهم.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KRj-TC-tzN">
+                                        <rect key="frame" x="33" y="561" width="255" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="شراء" backgroundImage="buy1-button.png">
+                                            <color key="titleColor" white="0.37078010950000001" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyNow:" destination="9Sl-Ud-vn1" eventType="touchUpInside" id="G6C-9O-miD"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VrR-uQ-nqf">
+                                        <rect key="frame" x="0.0" y="1398" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.3020928376" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sIe-dh-UR1">
+                                        <rect key="frame" x="0.0" y="1151" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.3020928376" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t3000-icon.png" id="0ZF-Sb-Id8">
+                                        <rect key="frame" x="242" y="1179" width="65" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="باقة 3000 متابع" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P2T-88-ZEg">
+                                        <rect key="frame" x="20" y="1196" width="206" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="احصل على 3000 متابع عربي حقيقي ١٠٠٪ أغلبهم من الخليج العربي، والتسليم يتم خلال ٤٨ ساعة فقط!" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y9k-s8-7l6">
+                                        <rect key="frame" x="14" y="1260" width="293" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zr3-4b-hD5">
+                                        <rect key="frame" x="33" y="1337" width="255" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="شراء" backgroundImage="buy1-button.png">
+                                            <color key="titleColor" white="0.37078010950000001" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyNow:" destination="9Sl-Ud-vn1" eventType="touchUpInside" id="O8B-KF-uf6"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="is9-MC-dpL">
+                                        <rect key="frame" x="0.0" y="1646" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.3020928376" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t2000-icon.png" id="mtE-2U-5cK">
+                                        <rect key="frame" x="242" y="1427" width="65" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="باقة 2000 متابع" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IpW-0f-NbJ">
+                                        <rect key="frame" x="20" y="1444" width="206" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="احصل على 2000 متابع عربي حقيقي ١٠٠٪ أغلبهم من الخليج العربي، والتسليم يتم خلال ٤٨ ساعة فقط!" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NdV-Wi-qCg">
+                                        <rect key="frame" x="14" y="1508" width="293" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cQY-jX-P5K">
+                                        <rect key="frame" x="33" y="1585" width="255" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="شراء" backgroundImage="buy1-button.png">
+                                            <color key="titleColor" white="0.37078010950000001" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyNow:" destination="9Sl-Ud-vn1" eventType="touchUpInside" id="I03-VE-Tei"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8O4-sr-j96">
+                                        <rect key="frame" x="45" y="1591" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eZm-LQ-iYo">
+                                        <rect key="frame" x="0.0" y="1894" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.3020928376" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t1000-icon.png" id="G9E-gp-AKK">
+                                        <rect key="frame" x="242" y="1675" width="65" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="باقة 1000 متابع" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dZZ-Kf-VEg">
+                                        <rect key="frame" x="20" y="1692" width="206" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="احصل على 1000 متابع عربي حقيقي ١٠٠٪ أغلبهم من الخليج العربي، والتسليم يتم خلال ٤٨ ساعة فقط!" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Llw-7b-gJO">
+                                        <rect key="frame" x="14" y="1756" width="293" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gE3-4D-Iu7">
+                                        <rect key="frame" x="33" y="1833" width="255" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="شراء" backgroundImage="buy1-button.png">
+                                            <color key="titleColor" white="0.37078010950000001" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyNow:" destination="9Sl-Ud-vn1" eventType="touchUpInside" id="fc2-rj-pgR"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y4h-to-bv9">
+                                        <rect key="frame" x="45" y="1839" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t500-icon.png" id="Gbg-cu-lnh">
+                                        <rect key="frame" x="242" y="1923" width="65" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="باقة 500 متابع" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bJi-o2-h3T">
+                                        <rect key="frame" x="20" y="1940" width="206" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="احصل على 500 متابع عربي حقيقي ١٠٠٪ أغلبهم من الخليج العربي، والتسليم يتم خلال ٤٨ ساعة فقط!" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e0c-tC-JVF">
+                                        <rect key="frame" x="14" y="2004" width="293" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ECZ-qV-4br">
+                                        <rect key="frame" x="33" y="2081" width="255" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="شراء" backgroundImage="buy1-button.png">
+                                            <color key="titleColor" white="0.37078010950000001" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyNow:" destination="9Sl-Ud-vn1" eventType="touchUpInside" id="9PQ-C0-phh"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rSR-xX-Vdw">
+                                        <rect key="frame" x="45" y="286" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BKf-BJ-bgb">
+                                        <rect key="frame" x="45" y="567" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y2e-5v-mck">
+                                        <rect key="frame" x="0.0" y="905" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.3020928376" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-back-icon.png" id="7KA-fU-wLw">
+                                        <rect key="frame" x="242" y="650" width="65" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عدم الفولو باك" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n0G-XX-AvG">
+                                        <rect key="frame" x="20" y="667" width="206" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MOB-gB-Tkt">
+                                        <rect key="frame" x="14" y="731" width="293" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">عند شراءك لهذه الميزة ستقوم الحسابات بمتابعتك دون أن تتابعهم، وبالتالي تضيف متابعين لحسابك دون أن تتابع أحد. تتيح أن تضغط تابع و الناس تتابعك من دون أن تتابعهم.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Hz1-Ch-Re3">
+                                        <rect key="frame" x="33" y="844" width="255" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="شراء" backgroundImage="buy1-button.png">
+                                            <color key="titleColor" white="0.37078010950000001" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyNow:" destination="9Sl-Ud-vn1" eventType="touchUpInside" id="aQ4-Nz-HUK"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="13" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qgy-Et-Vpi">
+                                        <rect key="frame" x="45" y="850" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="9" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iHK-sI-H06">
+                                        <rect key="frame" x="45" y="1343" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="12" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1tE-s3-LKQ">
+                                        <rect key="frame" x="45" y="2087" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="100-icon.png" id="jka-Rc-fZ2">
+                                        <rect key="frame" x="242" y="934" width="65" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 نقطة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="saS-T9-E1r">
+                                        <rect key="frame" x="20" y="951" width="206" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أحصل على ١٠٠ نقطة، وبالتالي ١٠٠ عملية متابعة لحظية." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PN5-VD-t5P">
+                                        <rect key="frame" x="14" y="1015" width="293" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WAh-Kd-GX2">
+                                        <rect key="frame" x="33" y="1092" width="255" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="شراء" backgroundImage="buy1-button.png">
+                                            <color key="titleColor" white="0.37078010950000001" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyNow:" destination="9Sl-Ud-vn1" eventType="touchUpInside" id="gNV-m1-QpH"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="16" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UQU-OX-wTP">
+                                        <rect key="frame" x="45" y="1098" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HQg-zO-fyo">
+                                        <rect key="frame" x="20" y="33" width="206" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">الفولو الماسي +
+ عدم فولوباك</string>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="الخدمات" id="PPg-1y-C7W"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="allScrollView" destination="b9e-mC-Bhl" id="AXe-ma-4ZA"/>
+                        <outlet property="fakeDescLabel" destination="gLL-cI-OTi" id="XM0-AD-v1p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FgY-2z-Hia" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956" y="928"/>
+        </scene>
+        <!--قائمة الحسابات-->
+        <scene sceneID="E6m-Xd-PdG">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="VZO-XW-HM5" customClass="YARABViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="قائمة الحسابات" image="list-icon.png" id="P3P-JI-Sk6"/>
+                    <navigationItem key="navigationItem" id="WdE-iW-SMU"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="IPr-Af-ZlR">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.26509071205827461" green="0.61639011691043977" blue="0.71873007015306123" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Q6M-ES-gsP" kind="relationship" relationship="rootViewController" id="xtg-cd-60b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="diX-2z-S0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1373" y="-365"/>
+        </scene>
+        <!--ريتويت | تفضيل | ردود | إقتباس-->
+        <scene sceneID="YiN-3b-Ofn">
+            <objects>
+                <navigationController id="7pB-dL-uwJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ريتويت | تفضيل | ردود | إقتباس" image="fav-icon.png" id="L7D-to-5iz"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="1f3-ii-I4o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.26509071210000001" green="0.61639011690000001" blue="0.71873007020000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QSa-BE-Pfp" kind="relationship" relationship="rootViewController" id="TxP-nt-gkS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OGt-Bu-f6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1880" y="31"/>
+        </scene>
+        <!--قائمة الحسابات-->
+        <scene sceneID="mAG-yQ-psH">
+            <objects>
+                <tableViewController id="Q6M-ES-gsP" customClass="HomeViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="25" sectionFooterHeight="25" id="KAo-Ic-m7G">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="8y6-ze-y5y" userLabel="theMainView">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jfa-gl-var">
+                                    <rect key="frame" x="15" y="195" width="290" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                    <state key="normal" title="إلغاء الحساب" backgroundImage="medal-cancel-button.png">
+                                        <color key="titleColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="cancelMyAccount:" destination="Q6M-ES-gsP" eventType="touchUpInside" id="0Il-M6-52f"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kTY-ql-aXp">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <color key="textColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bZy-0u-gPt">
+                                    <rect key="frame" x="0.0" y="49" width="320" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aEO-AO-rHH">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="neh-Fb-vWB">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NgQ-Dx-nzW">
+                                    <rect key="frame" x="40" y="73" width="90" height="103"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal">
+                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="checkAutoFollow:" destination="Q6M-ES-gsP" eventType="touchUpInside" id="IvX-nK-JcH"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="medal-empty.png" id="NIF-qb-aal">
+                                    <rect key="frame" x="65" y="82" width="40" height="58"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="الفولو التلقائي" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZYt-Ru-jkp">
+                                    <rect key="frame" x="22" y="147" width="127" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.62352943420410156" green="0.62352943420410156" blue="0.62352943420410156" alpha="1" colorSpace="deviceRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CNi-uF-yJM">
+                                    <rect key="frame" x="189" y="73" width="90" height="103"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal">
+                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="checkUnlimited:" destination="Q6M-ES-gsP" eventType="touchUpInside" id="5xR-dU-i48"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="medal-empty.png" id="Wwx-Y8-0sD">
+                                    <rect key="frame" x="214" y="82" width="40" height="58"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="الفولو الماسي" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="04D-OE-mNd">
+                                    <rect key="frame" x="171" y="147" width="127" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.62352943420410156" green="0.62352943420410156" blue="0.62352943420410156" alpha="1" colorSpace="deviceRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeCell" rowHeight="70" id="Umg-OT-BbN">
+                                <rect key="frame" x="0.0" y="276" width="320" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Umg-OT-BbN" id="XCx-1d-f2P">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view tag="1" contentMode="scaleToFill" id="YoV-H9-UaU" customClass="AsyncImageView">
+                                            <rect key="frame" x="18" y="11" width="48" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="center" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aFC-Hp-3kX">
+                                            <rect key="frame" x="77" y="24" width="170" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" alpha="0.0" tag="3" contentMode="scaleToFill" id="FYv-Oh-yRr">
+                                            <rect key="frame" x="255" y="11" width="48" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Q6M-ES-gsP" id="SVO-9n-SN6"/>
+                            <outlet property="delegate" destination="Q6M-ES-gsP" id="yz3-Fo-7MH"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="قائمة الحسابات" image="list-icon.png" id="phV-Az-r31"/>
+                    <navigationItem key="navigationItem" title="قائمة الحسابات" id="jks-1P-Zsj">
+                        <barButtonItem key="leftBarButtonItem" title="رجوع" id="x4K-qd-ivb">
+                            <connections>
+                                <action selector="backClicked:" destination="Q6M-ES-gsP" id="q79-Qx-y0R"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="تابع" id="6y3-r4-Wsw">
+                            <connections>
+                                <action selector="followAll:" destination="Q6M-ES-gsP" id="GMp-x0-LxB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityView" destination="cOb-Bx-unZ" id="Cyt-eR-d75"/>
+                        <outlet property="autoFollowImage" destination="NIF-qb-aal" id="Sfv-ct-Ur1"/>
+                        <outlet property="autoFollowLabel" destination="ZYt-Ru-jkp" id="3LL-lP-Xz0"/>
+                        <outlet property="countLabel" destination="YKm-lF-Itt" id="vQV-Xo-pyb"/>
+                        <outlet property="myProgress" destination="LlI-Uz-Opp" id="8oG-Oa-dXl"/>
+                        <outlet property="pointsLabel" destination="z47-Wg-F0j" id="91w-Vx-GGP"/>
+                        <outlet property="theFooterView" destination="aNh-KY-VPM" id="sqW-5G-IT1"/>
+                        <outlet property="theHeaderView" destination="m8J-8W-CoY" id="Cde-IW-Rrl"/>
+                        <outlet property="theMainLabel" destination="jks-1P-Zsj" id="cv3-OC-C8Q"/>
+                        <outlet property="theMainView" destination="8y6-ze-y5y" id="UgW-9w-aZh"/>
+                        <outlet property="unlimitedImage" destination="Wwx-Y8-0sD" id="JfB-ZG-dLJ"/>
+                        <outlet property="unlimitedLabel" destination="04D-OE-mNd" id="qxn-nI-Wpe"/>
+                        <outlet property="waitLabel" destination="3bT-AI-byH" id="UGG-HZ-8NF"/>
+                        <outlet property="waitView" destination="sVp-af-Z5O" id="Qrc-Zh-Lg0"/>
+                        <segue destination="9Sl-Ud-vn1" kind="push" identifier="buySegg" id="9gj-6Q-sId"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5c-Ft-8K4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="LlI-Uz-Opp">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </progressView>
+                <view contentMode="scaleToFill" id="m8J-8W-CoY" userLabel="theHeaderView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="header-img.png" id="nVZ-jU-GI3">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YKm-lF-Itt">
+                            <rect key="frame" x="0.0" y="2" width="320" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="sVp-af-Z5O" userLabel="waitView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="X0G-uT-OQh">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="569"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="wait-back-img.png" id="nlD-k6-EhF">
+                            <rect key="frame" x="40" y="155" width="240" height="160"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="whiteLarge" id="cOb-Bx-unZ">
+                            <rect key="frame" x="142" y="183" width="37" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <color key="color" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3bT-AI-byH">
+                            <rect key="frame" x="82" y="241" width="156" height="61"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="aNh-KY-VPM" userLabel="theFooterView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="header-img.png" id="5e9-kG-2bx">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عدد النقاط المتبقي : ١٠٠" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z47-Wg-F0j">
+                            <rect key="frame" x="8" y="2" width="304" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="2081" y="-373"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="aHS-DU-fz9">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="7Vm-8V-zfM" customClass="tabBarViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hVF-FA-2V5"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="vEN-2t-jaG">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="VZO-XW-HM5" kind="relationship" relationship="viewControllers" id="5pK-uF-Lgx"/>
+                        <segue destination="Yut-Cp-MUn" kind="relationship" relationship="viewControllers" id="urF-2h-RAc"/>
+                        <segue destination="7pB-dL-uwJ" kind="relationship" relationship="viewControllers" id="Ht4-QK-Ifd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jfu-cG-Xjg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484" y="23"/>
+        </scene>
+        <!--ريتويت | تفضيل | ردود | إقتباس-->
+        <scene sceneID="2yq-zZ-Qud">
+            <objects>
+                <viewController id="QSa-BE-Pfp" customClass="RetweetsInAppViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5WK-lx-VsI">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-background.png" id="tJO-yQ-Vdo">
+                                <rect key="frame" x="0.0" y="-65" width="320" height="569"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="e9m-3u-uyf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vip-icon.png" id="TA3-Rb-5fn">
+                                        <rect key="frame" x="242" y="18" width="65" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qnk-5h-Rnj">
+                                        <rect key="frame" x="14" y="91" width="293" height="169"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">1500 ريتويت من أشخاص ومتابعين حقيقيين يقومون بعمل ريتويت + تفضيل + ردود + إقتباس على تغريداتك لمدة شهر كامل قابل للتجديد، بحيث كل تغريدة تقوم بعملها سيتم عمل 1500 ريتويت لها، بالإضافة لوضعها بالمفضلة بكل الحسابات التي تقوم بعمل الريتويت وأيضاً تقوم هذه الحسابات بعمل ردود على تغريداتك، وبالتالي يصبح حسابك نشط للغاية لمدة شهر كامل.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="1500" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fKp-Lk-NKf">
+                                        <rect key="frame" x="33" y="273" width="255" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="شراء" backgroundImage="buy1-button.png">
+                                            <color key="titleColor" white="0.37078010950000001" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyNow:" destination="9Sl-Ud-vn1" eventType="touchUpInside" id="MaT-Y6-311"/>
+                                            <action selector="supscripe:" destination="QSa-BE-Pfp" eventType="touchUpInside" id="Axt-Zd-xr8"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="trW-tB-XAm">
+                                        <rect key="frame" x="0.0" y="328" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.3020928376" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xxl-ss-DvD">
+                                        <rect key="frame" x="45" y="279" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="باقة الشركات" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kF4-ln-gJq">
+                                        <rect key="frame" x="20" y="26" width="206" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold-icon.png" id="k1b-ef-E6j">
+                                        <rect key="frame" x="242" y="347" width="65" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jki-Ur-FpY">
+                                        <rect key="frame" x="14" y="420" width="293" height="169"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">500 ريتويت من أشخاص ومتابعين حقيقيين يقومون بعمل ريتويت + تفضيل + ردود + إقتباس على تغريداتك لمدة شهر كامل قابل للتجديد، بحيث كل تغريدة تقوم بعملها سيتم عمل 500 ريتويت لها، بالإضافة لوضعها بالمفضلة بكل الحسابات التي تقوم بعمل الريتويت وأيضاً تقوم هذه الحسابات بعمل ردود على تغريداتك، وبالتالي يصبح حسابك نشط للغاية لمدة شهر كامل.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="500" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="X6s-oh-Sad">
+                                        <rect key="frame" x="33" y="602" width="255" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="شراء" backgroundImage="buy1-button.png">
+                                            <color key="titleColor" white="0.37078010950000001" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyNow:" destination="9Sl-Ud-vn1" eventType="touchUpInside" id="Wf7-Nn-lhW"/>
+                                            <action selector="supscripe:" destination="QSa-BE-Pfp" eventType="touchUpInside" id="pd4-Qn-ZU0"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eA7-u9-tA8">
+                                        <rect key="frame" x="0.0" y="657" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.3020928376" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pth-mO-B02">
+                                        <rect key="frame" x="45" y="608" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الباقة الذهبية" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fYi-rQ-v4g">
+                                        <rect key="frame" x="20" y="356" width="206" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="silver-icon.png" id="fz2-Z4-Rlq">
+                                        <rect key="frame" x="242" y="676" width="65" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0BG-GM-ywV">
+                                        <rect key="frame" x="14" y="749" width="293" height="169"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">200 ريتويت من أشخاص ومتابعين حقيقيين يقومون بعمل ريتويت + تفضيل + ردود + إقتباس على تغريداتك لمدة شهر كامل قابل للتجديد، بحيث كل تغريدة تقوم بعملها سيتم عمل 200 ريتويت لها، بالإضافة لوضعها بالمفضلة بكل الحسابات التي تقوم بعمل الريتويت وأيضاً تقوم هذه الحسابات بعمل ردود على تغريداتك، وبالتالي يصبح حسابك نشط للغاية لمدة شهر كامل.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="12c-wO-3al">
+                                        <rect key="frame" x="33" y="931" width="255" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="شراء" backgroundImage="buy1-button.png">
+                                            <color key="titleColor" white="0.37078010950000001" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyNow:" destination="9Sl-Ud-vn1" eventType="touchUpInside" id="yEq-cy-t2y"/>
+                                            <action selector="supscripe:" destination="QSa-BE-Pfp" eventType="touchUpInside" id="R4f-Db-wd5"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4wi-Ib-qQF">
+                                        <rect key="frame" x="0.0" y="986" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.3020928376" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zzz-Kd-24L">
+                                        <rect key="frame" x="45" y="937" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الباقة الفضية" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CgB-iE-ihR">
+                                        <rect key="frame" x="20" y="684" width="206" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bronze-icon.png" id="E8e-C4-AOp">
+                                        <rect key="frame" x="242" y="1005" width="65" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="moO-fV-Das">
+                                        <rect key="frame" x="14" y="1078" width="293" height="169"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">50 ريتويت من أشخاص ومتابعين حقيقيين يقومون بعمل ريتويت + تفضيل + ردود + إقتباس على تغريداتك لمدة شهر كامل قابل للتجديد، بحيث كل تغريدة تقوم بعملها سيتم عمل 50 ريتويت لها، بالإضافة لوضعها بالمفضلة بكل الحسابات التي تقوم بعمل الريتويت وأيضاً تقوم هذه الحسابات بعمل ردود على تغريداتك، وبالتالي يصبح حسابك نشط للغاية لمدة شهر كامل.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="50" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LPN-QA-Xuv">
+                                        <rect key="frame" x="33" y="1260" width="255" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="شراء" backgroundImage="buy1-button.png">
+                                            <color key="titleColor" white="0.37078010950000001" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyNow:" destination="9Sl-Ud-vn1" eventType="touchUpInside" id="moL-dE-Zhg"/>
+                                            <action selector="supscripe:" destination="QSa-BE-Pfp" eventType="touchUpInside" id="jlu-RJ-XsL"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uij-Ax-djX">
+                                        <rect key="frame" x="0.0" y="1315" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.3020928376" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D3i-c8-evG">
+                                        <rect key="frame" x="45" y="1266" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الباقة البرونزية" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bEN-aC-5p6">
+                                        <rect key="frame" x="20" y="1013" width="206" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ريتويت | تفضيل | ردود | إقتباس" image="fav-icon.png" id="fj0-ag-PSO"/>
+                    <navigationItem key="navigationItem" title="ريتويت | تفضيل | ردود | إقتباس" id="btb-k5-zyT"/>
+                    <connections>
+                        <outlet property="label1" destination="Qnk-5h-Rnj" id="tbt-n8-hWd"/>
+                        <outlet property="label2" destination="jki-Ur-FpY" id="0i4-XU-B0K"/>
+                        <outlet property="label3" destination="0BG-GM-ywV" id="AWp-sD-u5t"/>
+                        <outlet property="label4" destination="moO-fV-Das" id="NzM-vX-n86"/>
+                        <outlet property="scrollView" destination="e9m-3u-uyf" id="bdz-An-7HW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ia-GS-YnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2602" y="-552"/>
+        </scene>
+        <!--الفولو الماسي-->
+        <scene sceneID="nup-yL-zcd">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Yut-Cp-MUn" customClass="YARABViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="الفولو الماسي" image="diamond-tab-icon.png" id="It4-KC-RtK"/>
+                    <navigationItem key="navigationItem" id="CZg-jT-xBx"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="YzD-Fs-Z6S">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.26509071210000001" green="0.61639011690000001" blue="0.71873007020000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tEB-5W-GKh" kind="relationship" relationship="rootViewController" id="wqh-B3-Qgf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xg4-qC-gNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1391" y="437"/>
+        </scene>
+        <!--الفولو الماسي-->
+        <scene sceneID="YII-To-TuP">
+            <objects>
+                <viewController id="tEB-5W-GKh" customClass="DiamondAutoFollowViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xbS-yK-xzl">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-background.png" id="c4a-3L-e50">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="569"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RYW-Sg-MKj">
+                                <rect key="frame" x="15" y="389" width="290" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <state key="normal" title="إشترك الآن" backgroundImage="medal-blue-button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9Sl-Ud-vn1" kind="push" id="Dra-a3-eb2"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medal-diamond.png" id="Ra8-1X-ZuP">
+                                <rect key="frame" x="25" y="378" width="40" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="right" id="GdB-en-ydU">
+                                <rect key="frame" x="18" y="20" width="285" height="337"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <string key="text">الفولو الماسي هو أقوى مزايا التطبيق وأكثرها كسباً للمتابعين، فهو يجمع بين الفولو التلقائي والفولو اللحظي كما أن المشترك بهذه الميزة سيظهر حسابه دائماً في مقدمة الحسابات بحيث تكون له الأولوية المطلقة في المتابعة، الاشتراك مدته ١٤ يوماً ويلزم تجديد الإشتراك بعد ذلك، وأقل عدد متابعين ممكن كسبه هو ٥٠٠٠ متابع كحد أدنى وممكن أن تصل لأكثر من ١٠ الاف متابع حقيقي خلال مدة الإشتراك (١٤ يوماً).
+
+ملاحظة: عند الإشتراك بهذه الميزة لن تكون مجبراً على فتح التطبيق ابداً، بحيث يتم كل شيئ تلقائياً ودون أي جهد منك.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="الفولو الماسي" id="UNq-jM-JkF"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="fakeDescLabel" destination="GdB-en-ydU" id="1AF-Zi-1Sa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mu7-m0-aQ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2266" y="497"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="100-icon.png" width="65" height="65"/>
+        <image name="a-icon.png" width="65" height="65"/>
+        <image name="about-img.png" width="25" height="25"/>
+        <image name="app-background.png" width="320" height="569"/>
+        <image name="bronze-icon.png" width="65" height="65"/>
+        <image name="buy1-button.png" width="224" height="32"/>
+        <image name="d-icon.png" width="65" height="65"/>
+        <image name="diamond-icon.png" width="48" height="48"/>
+        <image name="diamond-tab-icon.png" width="30" height="30"/>
+        <image name="fav-icon.png" width="30" height="30"/>
+        <image name="gold-icon.png" width="65" height="65"/>
+        <image name="header-img.png" width="320" height="25"/>
+        <image name="help-back.png" width="320" height="569"/>
+        <image name="ios8-icon.png" width="48" height="48"/>
+        <image name="list-icon.png" width="30" height="30"/>
+        <image name="medal-blue-button.png" width="290" height="35"/>
+        <image name="medal-cancel-button.png" width="290" height="35"/>
+        <image name="medal-diamond.png" width="40" height="58"/>
+        <image name="medal-empty.png" width="40" height="57"/>
+        <image name="new-buy-icon.png" width="48" height="48"/>
+        <image name="new-no-back.png" width="48" height="48"/>
+        <image name="no-back-icon.png" width="65" height="65"/>
+        <image name="silver-icon.png" width="65" height="65"/>
+        <image name="t1000-icon.png" width="65" height="65"/>
+        <image name="t2000-icon.png" width="65" height="65"/>
+        <image name="t3000-icon.png" width="65" height="65"/>
+        <image name="t500-icon.png" width="65" height="65"/>
+        <image name="true-icon.png" width="48" height="48"/>
+        <image name="unlimited-icon.png" width="48" height="48"/>
+        <image name="vip-icon.png" width="65" height="65"/>
+        <image name="wait-back-img.png" width="240" height="160"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="9gj-6Q-sId"/>
+    </inferredMetricsTieBreakers>
+</document>
