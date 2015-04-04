@@ -474,7 +474,11 @@ static bool removeWaitingView;
 -(void)updateTable2
 {
     [self.tableView reloadData];
+<<<<<<< HEAD
     UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"لايوجد حسابات حالياً" message:@"حاول مرة أخرى بعد قليل، شكراً لك." delegate:nil cancelButtonTitle:@"تم" otherButtonTitles:nil];
+=======
+    UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"لقد تبعت كل الحسابات المتواجدة حاليا ! (Y)" message:@"حاول مرة أخرى بعد قليل." delegate:nil cancelButtonTitle:@"" otherButtonTitles:nil];
+>>>>>>> localmaster
 
     [_waitView removeFromSuperview];
 

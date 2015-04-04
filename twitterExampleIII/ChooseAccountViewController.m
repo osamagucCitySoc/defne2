@@ -484,6 +484,7 @@ bool showw = YES;
 }
 
 #pragma mark - Table view delegate
+<<<<<<< HEAD
 - (BOOL)checkInternetWithDataWithThread{
     return [self checkInternetWithData];
 }
@@ -511,6 +512,15 @@ bool showw = YES;
         OLGhostAlertView* alert = [[OLGhostAlertView alloc]initWithTitle:@"عفوا" message:@"يجب أن تكون متصل بالإنترنت" timeout:3 dismissible:YES];
         [alert show];
     }
+=======
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    selected = (int)[indexPath row];
+    [[NSUserDefaults standardUserDefaults]setValue:[NSString stringWithFormat:@"%i",selected] forKey:@"accountIndex"];
+    [[NSUserDefaults standardUserDefaults]setValue:[[accounts objectAtIndex:selected] username] forKey:@"accountName"];
+    [self performSegueWithIdentifier:@"mainSeg" sender:self];
+>>>>>>> localmaster
 }
 
 

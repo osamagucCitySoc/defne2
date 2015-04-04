@@ -383,7 +383,11 @@
             <objects>
                 <viewController id="9Sl-Ud-vn1" customClass="InAppController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z8q-Wn-bNf">
+<<<<<<< HEAD
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+=======
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+>>>>>>> localmaster
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-background.png" id="y2v-2H-8hE">
@@ -391,7 +395,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="b9e-mC-Bhl">
+<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+=======
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+>>>>>>> localmaster
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d-icon.png" id="31V-wp-oV5">
@@ -769,7 +777,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FgY-2z-Hia" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="920" y="1085"/>
+=======
+            <point key="canvasLocation" x="956" y="928"/>
+>>>>>>> localmaster
         </scene>
         <!--قائمة الحسابات-->
         <scene sceneID="E6m-Xd-PdG">
@@ -800,7 +812,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="1f3-ii-I4o">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+<<<<<<< HEAD
                         <color key="tintColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+=======
+>>>>>>> localmaster
                         <color key="barTintColor" red="0.26509071210000001" green="0.61639011690000001" blue="0.71873007020000002" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
@@ -1065,7 +1080,11 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="1950" y="-583"/>
+=======
+            <point key="canvasLocation" x="2081" y="-373"/>
+>>>>>>> localmaster
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="aHS-DU-fz9">
@@ -1113,12 +1132,20 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qnk-5h-Rnj">
                                         <rect key="frame" x="14" y="91" width="293" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+<<<<<<< HEAD
                                         <string key="text">50 ريتويت من أشخاص ومتابعين عرب حقيقيين يقومون بعمل ريتويت + تفضيل + ردود + إقتباس على كل تغريداتك بشكل تلقائي، بحيث كل تغريدة تقوم بعملها سيتم عمل 50 ريتويت لها، بالإضافة لوضعها بالمفضلة بكل الحسابات التي تقوم بعمل الريتويت وأيضاً تقوم هذه الحسابات بعمل ردود على تغريداتك، وبالتالي يصبح حسابك نشيط للغاية.هذه الخدمة تكون فقط لحساب تويتر المختار فإن أردت أن تنشط أكثر من حساب يتم الإشتراك بالخدمة لكل حساب على حدى</string>
+=======
+                                        <string key="text">1500 ريتويت من أشخاص ومتابعين حقيقيين يقومون بعمل ريتويت + تفضيل + ردود + إقتباس على تغريداتك لمدة شهر كامل قابل للتجديد، بحيث كل تغريدة تقوم بعملها سيتم عمل 1500 ريتويت لها، بالإضافة لوضعها بالمفضلة بكل الحسابات التي تقوم بعمل الريتويت وأيضاً تقوم هذه الحسابات بعمل ردود على تغريداتك، وبالتالي يصبح حسابك نشط للغاية لمدة شهر كامل.</string>
+>>>>>>> localmaster
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+<<<<<<< HEAD
                                     <button opaque="NO" tag="50" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fKp-Lk-NKf">
+=======
+                                    <button opaque="NO" tag="1500" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fKp-Lk-NKf">
+>>>>>>> localmaster
                                         <rect key="frame" x="33" y="273" width="255" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1127,6 +1154,10 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+<<<<<<< HEAD
+=======
+                                            <action selector="buyNow:" destination="9Sl-Ud-vn1" eventType="touchUpInside" id="MaT-Y6-311"/>
+>>>>>>> localmaster
                                             <action selector="supscripe:" destination="QSa-BE-Pfp" eventType="touchUpInside" id="Axt-Zd-xr8"/>
                                         </connections>
                                     </button>
@@ -1145,7 +1176,11 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+<<<<<<< HEAD
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إشتراك VIP شهري" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kF4-ln-gJq">
+=======
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="باقة الشركات" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kF4-ln-gJq">
+>>>>>>> localmaster
                                         <rect key="frame" x="20" y="26" width="206" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -1159,12 +1194,20 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jki-Ur-FpY">
                                         <rect key="frame" x="14" y="420" width="293" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+<<<<<<< HEAD
                                         <string key="text">100 ريتويت من حسابات وأشخاص عرب حقيقيين، يقومون بعمل ريتويت لتغريدة واحدة من تغريداتك أنت تقوم بإختيارها بنفس اللحظة اللتي تقوم فيها بشراء هذه الميزة، ولمرة واحدة فقط لكل تغريدة، فمثلاً إذا كنت تريد عمل 100 ريتويت لأكثر من تغريدة، فعليك بشراء هذه الميزة لكل تغريدة بشكل منفصل.</string>
+=======
+                                        <string key="text">500 ريتويت من أشخاص ومتابعين حقيقيين يقومون بعمل ريتويت + تفضيل + ردود + إقتباس على تغريداتك لمدة شهر كامل قابل للتجديد، بحيث كل تغريدة تقوم بعملها سيتم عمل 500 ريتويت لها، بالإضافة لوضعها بالمفضلة بكل الحسابات التي تقوم بعمل الريتويت وأيضاً تقوم هذه الحسابات بعمل ردود على تغريداتك، وبالتالي يصبح حسابك نشط للغاية لمدة شهر كامل.</string>
+>>>>>>> localmaster
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+<<<<<<< HEAD
                                     <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="X6s-oh-Sad">
+=======
+                                    <button opaque="NO" tag="500" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="X6s-oh-Sad">
+>>>>>>> localmaster
                                         <rect key="frame" x="33" y="602" width="255" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1173,7 +1216,12 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+<<<<<<< HEAD
                                             <action selector="oneTweetBuy:" destination="QSa-BE-Pfp" eventType="touchUpInside" id="OGa-2z-NGG"/>
+=======
+                                            <action selector="buyNow:" destination="9Sl-Ud-vn1" eventType="touchUpInside" id="Wf7-Nn-lhW"/>
+                                            <action selector="supscripe:" destination="QSa-BE-Pfp" eventType="touchUpInside" id="pd4-Qn-ZU0"/>
+>>>>>>> localmaster
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eA7-u9-tA8">
@@ -1191,8 +1239,13 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+<<<<<<< HEAD
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 ريتويت لحظي" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fYi-rQ-v4g">
                                         <rect key="frame" x="20" y="355" width="206" height="49"/>
+=======
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الباقة الذهبية" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fYi-rQ-v4g">
+                                        <rect key="frame" x="20" y="356" width="206" height="49"/>
+>>>>>>> localmaster
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
@@ -1205,12 +1258,20 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0BG-GM-ywV">
                                         <rect key="frame" x="14" y="749" width="293" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+<<<<<<< HEAD
                                         <string key="text">50 ريتويت من حسابات وأشخاص عرب حقيقيين، يقومون بعمل ريتويت لتغريدة واحدة من تغريداتك أنت تقوم بإختيارها بنفس اللحظة اللتي تقوم فيها بشراء هذه الميزة، ولمرة واحدة فقط لكل تغريدة، فمثلاً إذا كنت تريد عمل 50 ريتويت لأكثر من تغريدة، فعليك بشراء هذه الميزة لكل تغريدة بشكل منفصل.</string>
+=======
+                                        <string key="text">200 ريتويت من أشخاص ومتابعين حقيقيين يقومون بعمل ريتويت + تفضيل + ردود + إقتباس على تغريداتك لمدة شهر كامل قابل للتجديد، بحيث كل تغريدة تقوم بعملها سيتم عمل 200 ريتويت لها، بالإضافة لوضعها بالمفضلة بكل الحسابات التي تقوم بعمل الريتويت وأيضاً تقوم هذه الحسابات بعمل ردود على تغريداتك، وبالتالي يصبح حسابك نشط للغاية لمدة شهر كامل.</string>
+>>>>>>> localmaster
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+<<<<<<< HEAD
                                     <button opaque="NO" tag="50" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="12c-wO-3al">
+=======
+                                    <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="12c-wO-3al">
+>>>>>>> localmaster
                                         <rect key="frame" x="33" y="931" width="255" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1219,7 +1280,12 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+<<<<<<< HEAD
                                             <action selector="oneTweetBuy:" destination="QSa-BE-Pfp" eventType="touchUpInside" id="kCw-lx-sVo"/>
+=======
+                                            <action selector="buyNow:" destination="9Sl-Ud-vn1" eventType="touchUpInside" id="yEq-cy-t2y"/>
+                                            <action selector="supscripe:" destination="QSa-BE-Pfp" eventType="touchUpInside" id="R4f-Db-wd5"/>
+>>>>>>> localmaster
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4wi-Ib-qQF">
@@ -1251,12 +1317,20 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="moO-fV-Das">
                                         <rect key="frame" x="14" y="1078" width="293" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+<<<<<<< HEAD
                                         <string key="text">10 ريتويت من حسابات وأشخاص عرب حقيقيين، يقومون بعمل ريتويت لتغريدة واحدة من تغريداتك أنت تقوم بإختيارها بنفس اللحظة اللتي تقوم فيها بشراء هذه الميزة، ولمرة واحدة فقط لكل تغريدة، فمثلاً إذا كنت تريد عمل 10 ريتويت لأكثر من تغريدة، فعليك بشراء هذه الميزة لكل تغريدة بشكل منفصل.</string>
+=======
+                                        <string key="text">50 ريتويت من أشخاص ومتابعين حقيقيين يقومون بعمل ريتويت + تفضيل + ردود + إقتباس على تغريداتك لمدة شهر كامل قابل للتجديد، بحيث كل تغريدة تقوم بعملها سيتم عمل 50 ريتويت لها، بالإضافة لوضعها بالمفضلة بكل الحسابات التي تقوم بعمل الريتويت وأيضاً تقوم هذه الحسابات بعمل ردود على تغريداتك، وبالتالي يصبح حسابك نشط للغاية لمدة شهر كامل.</string>
+>>>>>>> localmaster
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.30297673359999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+<<<<<<< HEAD
                                     <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LPN-QA-Xuv">
+=======
+                                    <button opaque="NO" tag="50" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LPN-QA-Xuv">
+>>>>>>> localmaster
                                         <rect key="frame" x="33" y="1260" width="255" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1265,7 +1339,12 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+<<<<<<< HEAD
                                             <action selector="oneTweetBuy:" destination="QSa-BE-Pfp" eventType="touchUpInside" id="i0Z-GQ-ZCe"/>
+=======
+                                            <action selector="buyNow:" destination="9Sl-Ud-vn1" eventType="touchUpInside" id="moL-dE-Zhg"/>
+                                            <action selector="supscripe:" destination="QSa-BE-Pfp" eventType="touchUpInside" id="jlu-RJ-XsL"/>
+>>>>>>> localmaster
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uij-Ax-djX">
@@ -1304,12 +1383,19 @@
                         <outlet property="label3" destination="0BG-GM-ywV" id="AWp-sD-u5t"/>
                         <outlet property="label4" destination="moO-fV-Das" id="NzM-vX-n86"/>
                         <outlet property="scrollView" destination="e9m-3u-uyf" id="bdz-An-7HW"/>
+<<<<<<< HEAD
                         <segue destination="Ate-Sg-PGu" kind="push" identifier="tweetChooseSeg" id="ca1-n5-FIU"/>
+=======
+>>>>>>> localmaster
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ia-GS-YnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="2623" y="-552"/>
+=======
+            <point key="canvasLocation" x="2602" y="-552"/>
+>>>>>>> localmaster
         </scene>
         <!--الفولو الماسي-->
         <scene sceneID="nup-yL-zcd">
@@ -1380,6 +1466,7 @@
             </objects>
             <point key="canvasLocation" x="2266" y="497"/>
         </scene>
+<<<<<<< HEAD
         <!--إختر التغريدة-->
         <scene sceneID="346-bL-YzT">
             <objects>
@@ -1445,6 +1532,8 @@
             </objects>
             <point key="canvasLocation" x="3127" y="-552"/>
         </scene>
+=======
+>>>>>>> localmaster
     </scenes>
     <resources>
         <image name="100-icon.png" width="65" height="65"/>
@@ -1485,6 +1574,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="Cr6-X6-YYj"/>
+=======
+        <segue reference="9gj-6Q-sId"/>
+>>>>>>> localmaster
     </inferredMetricsTieBreakers>
 </document>

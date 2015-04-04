@@ -12,7 +12,12 @@
 #import <QuartzCore/QuartzCore.h>
 #import "AboutViewController.h"
 #import "UIDevice+IdentifierAddition.h"
+<<<<<<< HEAD
 #import "GADBannerView.h"
+=======
+#import <GoogleMobileAds/GoogleMobileAds.h>
+//#import "GADBannerView.h"
+>>>>>>> localmaster
 #import "UICKeyChainStore.h"
 
 

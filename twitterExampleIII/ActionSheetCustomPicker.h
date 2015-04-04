@@ -17,7 +17,11 @@
 #pragma mark - Properties
 /////////////////////////////////////////////////////////////////////////
 @property(nonatomic, strong) id <ActionSheetCustomPickerDelegate> delegate;
+<<<<<<< HEAD
 @property(nonatomic) int tagg;
+=======
+
+>>>>>>> localmaster
 
 /////////////////////////////////////////////////////////////////////////
 #pragma mark - Init Methods

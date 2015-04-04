@@ -174,9 +174,14 @@
 		45C3E18A17D4C698007D5000 /* medal-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C3E18817D4C698007D5000 /* medal-button@2x.png */; };
 		45C3E18D17D4E173007D5000 /* autofollow-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C3E18B17D4E173007D5000 /* autofollow-icon.png */; };
 		45C3E18E17D4E173007D5000 /* autofollow-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C3E18C17D4E173007D5000 /* autofollow-icon@2x.png */; };
+<<<<<<< HEAD
 		E801A86E1A662BBA008E88D5 /* TweetChoserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E801A86D1A662BB9008E88D5 /* TweetChoserViewController.m */; };
 		E837E8411A6247CD0003817E /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E837E83F1A6247CD0003817E /* libGoogleAdMobAds.a */; };
 		E837E8421A6247CD0003817E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = E837E8401A6247CD0003817E /* README.txt */; };
+=======
+		E84062DC1ACDD5F2008F1665 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E84062DB1ACDD5F2008F1665 /* GoogleMobileAds.framework */; };
+		E84062DE1ACDD6FA008F1665 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E84062DD1ACDD6FA008F1665 /* CoreMedia.framework */; };
+>>>>>>> localmaster
 		E8F7ACCD1A58677D00185BD1 /* RetweetsInAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F7ACCC1A58677D00185BD1 /* RetweetsInAppViewController.m */; };
 		FA2859C01768C4E800862F0D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2859BF1768C4E800862F0D /* HomeViewController.m */; };
 		FA3415C71768A8B700C114F2 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA828A891768A2FD00F16B60 /* Accounts.framework */; };
@@ -419,6 +424,7 @@
 		45C3E18817D4C698007D5000 /* medal-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medal-button@2x.png"; sourceTree = "<group>"; };
 		45C3E18B17D4E173007D5000 /* autofollow-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "autofollow-icon.png"; sourceTree = "<group>"; };
 		45C3E18C17D4E173007D5000 /* autofollow-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "autofollow-icon@2x.png"; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		E801A86C1A662BB9008E88D5 /* TweetChoserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetChoserViewController.h; sourceTree = "<group>"; };
 		E801A86D1A662BB9008E88D5 /* TweetChoserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetChoserViewController.m; sourceTree = "<group>"; };
 		E837E8331A6247CD0003817E /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
@@ -450,6 +456,10 @@
 		E837E8521A6247D30003817E /* GADCustomEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventRequest.h; sourceTree = "<group>"; };
 		E837E8541A6247D30003817E /* GADSearchBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADSearchBannerView.h; sourceTree = "<group>"; };
 		E837E8551A6247D30003817E /* GADSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADSearchRequest.h; sourceTree = "<group>"; };
+=======
+		E84062DB1ACDD5F2008F1665 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		E84062DD1ACDD6FA008F1665 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+>>>>>>> localmaster
 		E8F7ACCB1A58677D00185BD1 /* RetweetsInAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetweetsInAppViewController.h; sourceTree = "<group>"; };
 		E8F7ACCC1A58677D00185BD1 /* RetweetsInAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetweetsInAppViewController.m; sourceTree = "<group>"; };
 		FA2859BE1768C4E800862F0D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -522,9 +532,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				045B01F319EA413700113216 /* EventKit.framework in Frameworks */,
 				045B01F419EA413700113216 /* EventKitUI.framework in Frameworks */,
 				E837E8411A6247CD0003817E /* libGoogleAdMobAds.a in Frameworks */,
+=======
+				E84062DE1ACDD6FA008F1665 /* CoreMedia.framework in Frameworks */,
+				E84062DC1ACDD5F2008F1665 /* GoogleMobileAds.framework in Frameworks */,
+				045B01F319EA413700113216 /* EventKit.framework in Frameworks */,
+				045B01F419EA413700113216 /* EventKitUI.framework in Frameworks */,
+>>>>>>> localmaster
 				FA54080D17D12C0D00947449 /* Social.framework in Frameworks */,
 				047D3A7D199776C2004E770F /* MobileCoreServices.framework in Frameworks */,
 				047D3A7B199776A0004E770F /* libz.dylib in Frameworks */,
@@ -619,6 +636,7 @@
 		047D3A6E1997708C004E770F /* GADS */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				E837E8431A6247D30003817E /* Add-ons */,
 				E837E8331A6247CD0003817E /* GADAdMobExtras.h */,
 				E837E8341A6247CD0003817E /* GADAdNetworkExtras.h */,
@@ -634,6 +652,9 @@
 				E837E83E1A6247CD0003817E /* GADRequestError.h */,
 				E837E83F1A6247CD0003817E /* libGoogleAdMobAds.a */,
 				E837E8401A6247CD0003817E /* README.txt */,
+=======
+				E84062DB1ACDD5F2008F1665 /* GoogleMobileAds.framework */,
+>>>>>>> localmaster
 			);
 			name = GADS;
 			sourceTree = "<group>";
@@ -772,6 +793,7 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		E837E8431A6247D30003817E /* Add-ons */ = {
 			isa = PBXGroup;
 			children = (
@@ -818,6 +840,8 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+=======
+>>>>>>> localmaster
 		FA497B7017A120240022D215 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -860,6 +884,10 @@
 		FA828A501768A29C00F16B60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+=======
+				E84062DD1ACDD6FA008F1665 /* CoreMedia.framework */,
+>>>>>>> localmaster
 				045B01F119EA413700113216 /* EventKit.framework */,
 				045B01F219EA413700113216 /* EventKitUI.framework */,
 				047D3A7C199776C2004E770F /* MobileCoreServices.framework */,
@@ -914,8 +942,11 @@
 				FA2859BF1768C4E800862F0D /* HomeViewController.m */,
 				E8F7ACCB1A58677D00185BD1 /* RetweetsInAppViewController.h */,
 				E8F7ACCC1A58677D00185BD1 /* RetweetsInAppViewController.m */,
+<<<<<<< HEAD
 				E801A86C1A662BB9008E88D5 /* TweetChoserViewController.h */,
 				E801A86D1A662BB9008E88D5 /* TweetChoserViewController.m */,
+=======
+>>>>>>> localmaster
 				04594C7619F4DA220084B72E /* Misc. */,
 				0481849C19D712510011B3DC /* Images.xcassets */,
 			);
@@ -1100,7 +1131,10 @@
 				45A40DB6176CB9E700D78634 /* more-apps-img.png in Resources */,
 				45A40DB7176CB9E700D78634 /* more-apps-img@2x.png in Resources */,
 				1E5BF58E19F2B10500F00A41 /* ios8-icon@3x.png in Resources */,
+<<<<<<< HEAD
 				E837E8421A6247CD0003817E /* README.txt in Resources */,
+=======
+>>>>>>> localmaster
 				1E5BF5C419F3CED900F00A41 /* t500-icon@3x.png in Resources */,
 				45A40DB9176CBAD100D78634 /* twitter-img.png in Resources */,
 				45A40DBC176CC9B000D78634 /* footer-img.png in Resources */,
@@ -1238,7 +1272,10 @@
 				045B01C319E9C0FF00113216 /* NSString+STTwitter.m in Sources */,
 				0481849219D707D10011B3DC /* AbstractActionSheetPicker.m in Sources */,
 				045B01CC19E9C0FF00113216 /* JSONSyntaxHighlight.m in Sources */,
+<<<<<<< HEAD
 				E801A86E1A662BBA008E88D5 /* TweetChoserViewController.m in Sources */,
+=======
+>>>>>>> localmaster
 				E8F7ACCD1A58677D00185BD1 /* RetweetsInAppViewController.m in Sources */,
 				FA497B7517A120240022D215 /* NSString+MD5Addition.m in Sources */,
 				FA497B7617A120240022D215 /* UIDevice+IdentifierAddition.m in Sources */,
@@ -1343,6 +1380,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+<<<<<<< HEAD
+=======
+					"$(PROJECT_DIR)/twitterExampleIII",
+>>>>>>> localmaster
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "twitterExampleIII/twitterExampleIII-Prefix.pch";
@@ -1357,10 +1398,14 @@
 					"$(PROJECT_DIR)/twitterExampleIII",
 				);
 				ONLY_ACTIVE_ARCH = NO;
+<<<<<<< HEAD
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"$(PROJECT_DIR)/twitterExampleIII/libGoogleAdMobAds.a",
 				);
+=======
+				OTHER_LDFLAGS = "";
+>>>>>>> localmaster
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2C581387-3AFC-496B-9A2A-69B1003E315F";
@@ -1380,6 +1425,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+<<<<<<< HEAD
+=======
+					"$(PROJECT_DIR)/twitterExampleIII",
+>>>>>>> localmaster
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "twitterExampleIII/twitterExampleIII-Prefix.pch";
@@ -1394,10 +1443,14 @@
 					"$(PROJECT_DIR)/twitterExampleIII",
 				);
 				ONLY_ACTIVE_ARCH = NO;
+<<<<<<< HEAD
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"$(PROJECT_DIR)/twitterExampleIII/libGoogleAdMobAds.a",
 				);
+=======
+				OTHER_LDFLAGS = "";
+>>>>>>> localmaster
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2C581387-3AFC-496B-9A2A-69B1003E315F";

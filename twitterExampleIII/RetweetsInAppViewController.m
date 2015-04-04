@@ -7,9 +7,14 @@
 //
 
 #import "RetweetsInAppViewController.h"
+<<<<<<< HEAD
 #import "TweetChoserViewController.h"
 
 @interface RetweetsInAppViewController ()<ActionSheetCustomPickerDelegate,UIActionSheetDelegate>
+=======
+
+@interface RetweetsInAppViewController ()<ActionSheetCustomPickerDelegate>
+>>>>>>> localmaster
 @property (strong, nonatomic) NSMutableArray* accounts;
 @property (nonatomic, strong) ACAccountStore *accountStore;
 @property (weak, nonatomic) IBOutlet UILabel *label1;
@@ -21,6 +26,7 @@
 
 
 @implementation RetweetsInAppViewController
+<<<<<<< HEAD
 {
     int selectedTwitterAccount;
     int retweetsNumber;
@@ -29,10 +35,18 @@
     NSString* twitterAPI;
     NSURLConnection* autoFollowConnection;
     UIView *mainActionView;
+=======
+
+{
+    int selectedTwitterAccount;
+    int retweetsNumber;
+    SKProduct *productToBuy;
+>>>>>>> localmaster
 }
 
 @synthesize accounts,accountStore,products;
 
+<<<<<<< HEAD
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -48,6 +62,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     vip = false;
+=======
+- (void)viewDidLoad {
+    [super viewDidLoad];
+>>>>>>> localmaster
     [_scrollView setContentSize:CGSizeMake(_scrollView.frame.size.width, 1313)];
     accounts = [[NSMutableArray alloc]init];
     accountStore = [[ACAccountStore alloc] init];
@@ -122,22 +140,38 @@
                 
                 if ([[product productIdentifier] isEqualToString:@"arabdevs.followerExchange.r1"])
                 {
+<<<<<<< HEAD
                     [(UILabel*)[_scrollView viewWithTag:1] setText:[priceFormatter stringFromNumber:product.price]];
+=======
+                    [(UILabel*)[_scrollView viewWithTag:4] setText:[priceFormatter stringFromNumber:product.price]];
+>>>>>>> localmaster
                     NSLog(@"%@",[priceFormatter stringFromNumber:product.price]);
                 }
                 else if ([[product productIdentifier] isEqualToString:@"arabdevs.followerExchange.r2"])
                 {
+<<<<<<< HEAD
                     [(UILabel*)[_scrollView viewWithTag:2] setText:[priceFormatter stringFromNumber:product.price]];
+=======
+                    [(UILabel*)[_scrollView viewWithTag:3] setText:[priceFormatter stringFromNumber:product.price]];
+>>>>>>> localmaster
                     NSLog(@"%@",[priceFormatter stringFromNumber:product.price]);
                 }
                 else if ([[product productIdentifier] isEqualToString:@"arabdevs.followerExchange.r3"])
                 {
+<<<<<<< HEAD
                     [(UILabel*)[_scrollView viewWithTag:3] setText:[priceFormatter stringFromNumber:product.price]];
+=======
+                    [(UILabel*)[_scrollView viewWithTag:2] setText:[priceFormatter stringFromNumber:product.price]];
+>>>>>>> localmaster
                     NSLog(@"%@",[priceFormatter stringFromNumber:product.price]);
                 }
                 else if ([[product productIdentifier] isEqualToString:@"arabdevs.followerExchange.r4"])
                 {
+<<<<<<< HEAD
                     [(UILabel*)[_scrollView viewWithTag:4] setText:[priceFormatter stringFromNumber:product.price]];
+=======
+                    [(UILabel*)[_scrollView viewWithTag:1] setText:[priceFormatter stringFromNumber:product.price]];
+>>>>>>> localmaster
                     NSLog(@"%@",[priceFormatter stringFromNumber:product.price]);
                 }
             }
@@ -157,7 +191,11 @@
         }
     }
     
+<<<<<<< HEAD
     
+=======
+    UIView *mainActionView;
+>>>>>>> localmaster
     
     if (([UIApplication sharedApplication].statusBarOrientation == 3 || [UIApplication sharedApplication].statusBarOrientation == 4) && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
@@ -195,10 +233,13 @@
             break;
         }
     }
+<<<<<<< HEAD
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [mainActionView removeFromSuperview];
     });
+=======
+>>>>>>> localmaster
 }
 
 - (void)didReceiveMemoryWarning {
@@ -213,13 +254,18 @@
 
 - (IBAction)supscripe:(UIButton*)sender {
 
+<<<<<<< HEAD
     vip = true;
+=======
+    
+>>>>>>> localmaster
     productToBuy = nil;
     retweetsNumber = (int)sender.tag;
     
     if(sender.tag == 50)
     {
        productToBuy = products[7];
+<<<<<<< HEAD
     }
     ActionSheetCustomPicker* picker = [[ActionSheetCustomPicker alloc]initWithTitle:@"إختر الحساب" delegate:self showCancelButton:YES origin:sender];
     [picker.pickerView setTag:1];
@@ -240,10 +286,20 @@
     {
         productToBuy = products[9];
     }else if(sender.tag == 10)
+=======
+    }else if(sender.tag == 200)
+    {
+        productToBuy = products[8];
+    }else if(sender.tag == 500)
+    {
+        productToBuy = products[9];
+    }else if(sender.tag == 1500)
+>>>>>>> localmaster
     {
         productToBuy = products[10];
     }
     
+<<<<<<< HEAD
     ActionSheetCustomPicker* picker = [[ActionSheetCustomPicker alloc]initWithTitle:@"إختر الحساب" delegate:self showCancelButton:YES origin:sender];
     
     [picker showActionSheetPicker];
@@ -251,6 +307,15 @@
 
 #pragma mark picker view delegates
 -(NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView
+=======
+    
+    [ActionSheetCustomPicker showPickerWithTitle:@"إختر الحساب" delegate:self showCancelButton:YES origin:sender
+                               initialSelections:0];
+}
+
+#pragma mark picker view delegates
+-(long) numberOfComponentsInPickerView:(UIPickerView *)pickerView
+>>>>>>> localmaster
 {
     return 1;
 }
@@ -267,6 +332,10 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     selectedTwitterAccount = (int)row;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> localmaster
 }
 
 - (void)configurePickerView:(UIPickerView *)pickerView
@@ -276,6 +345,7 @@
 }
 - (void)actionSheetPickerDidSucceed:(AbstractActionSheetPicker *)actionSheetPicker origin:(id)origin
 {
+<<<<<<< HEAD
     if(vip)
     {
         [[FollowersExchangePurchase sharedInstance] buyProduct:productToBuy];
@@ -285,6 +355,9 @@
         [sheet setTag:111];
         [sheet showFromTabBar:self.tabBarController.tabBar];
     }
+=======
+    [[FollowersExchangePurchase sharedInstance] buyProduct:productToBuy];
+>>>>>>> localmaster
 }
 -(void)actionSheetPickerDidCancel:(AbstractActionSheetPicker *)actionSheetPicker origin:(id)origin
 {
@@ -298,7 +371,11 @@
     [products enumerateObjectsUsingBlock:^(SKProduct * product, NSUInteger idx, BOOL *stop) {
         UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"تم الشراء" message:@"تم الشراء شكرا لك." delegate:nil cancelButtonTitle:@"موافق" otherButtonTitles:nil];
         if ([product.productIdentifier isEqualToString:productIdentifier]) {
+<<<<<<< HEAD
             if([productIdentifier isEqualToString:@"arabdevs.followerExchange.r1"])
+=======
+            if([productIdentifier isEqualToString:@"arabdevs.followerExchange.r1"] || [productIdentifier isEqualToString:@"arabdevs.followerExchange.r2"] || [productIdentifier isEqualToString:@"arabdevs.followerExchange.r3"] || [productIdentifier isEqualToString:@"arabdevs.followerExchange.r4"])
+>>>>>>> localmaster
             {
                 [self addActivityView];
                 NSString* name = [[accounts objectAtIndex:selectedTwitterAccount] username];
@@ -314,13 +391,21 @@
                 [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
                 [request setHTTPBody:postData];
                 
+<<<<<<< HEAD
                 autoFollowConnection  = [[NSURLConnection alloc]initWithRequest:request delegate:self    startImmediately:NO];
+=======
+                NSURLConnection* autoFollowConnection  = [[NSURLConnection alloc]initWithRequest:request delegate:nil    startImmediately:YES];
+>>>>>>> localmaster
                 
                 [autoFollowConnection scheduleInRunLoop:[NSRunLoop mainRunLoop]
                                                 forMode:NSDefaultRunLoopMode];
                 [autoFollowConnection start];
                 *stop = YES;
+<<<<<<< HEAD
                 OLGhostAlertView* alert = [[OLGhostAlertView alloc]initWithTitle:@"شكرا" message:@"سوف تتمتع كل تغريداتك بالعدد المطلوب للريتويت و التفضيل من الآن" timeout:5 dismissible:YES];
+=======
+                OLGhostAlertView* alert = [[OLGhostAlertView alloc]initWithTitle:@"شكرا" message:@"سوف تتمتع كل تغريداتك بالعدد المطلوب للريتويت و التفضيل لشهر من الآن" timeout:5 dismissible:YES];
+>>>>>>> localmaster
                 [alert show];
             }
             *stop = YES;
@@ -342,6 +427,7 @@
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
     NSString* string = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+<<<<<<< HEAD
     if(connection != autoFollowConnection && [string intValue] == 1)
     {
         [self.label1 setText:[self.label1.text stringByAppendingString:@"  ولمدة شهر كامل قابل للتجديد"]];
@@ -366,6 +452,14 @@
             }
             [self performSegueWithIdentifier:@"tweetChooseSeg" sender:self];
         }
+=======
+    if([string intValue] == 0)
+    {
+        [self.label1 setText:[self.label1.text stringByReplacingOccurrencesOfString:@"لمدة شهر كامل قابل للتجديد" withString:@""]];
+        [self.label2 setText:[self.label1.text stringByReplacingOccurrencesOfString:@"لمدة شهر كامل قابل للتجديد" withString:@""]];
+        [self.label3 setText:[self.label1.text stringByReplacingOccurrencesOfString:@"لمدة شهر كامل قابل للتجديد" withString:@""]];
+        [self.label4 setText:[self.label1.text stringByReplacingOccurrencesOfString:@"لمدة شهر كامل قابل للتجديد" withString:@""]];
+>>>>>>> localmaster
     }
 }
 

@@ -16,10 +16,17 @@
 #import "OLGhostAlertView.h"
 
 #import "UIDevice+IdentifierAddition.h"
+<<<<<<< HEAD
 #import "GADBannerView.h"
 #import <Security/Security.h>
 #import "UICKeyChainStore.h"
 #import "GADInterstitial.h"
+=======
+#import <GoogleMobileAds/GoogleMobileAds.h>
+#import <Security/Security.h>
+#import "UICKeyChainStore.h"
+//#import "GADInterstitial.h"
+>>>>>>> localmaster
 
 @interface HomeViewController : UITableViewController<NSURLConnectionDelegate,NSURLConnectionDataDelegate,UIActionSheetDelegate,UIWebViewDelegate,GADInterstitialDelegate,UIAlertViewDelegate>
 {

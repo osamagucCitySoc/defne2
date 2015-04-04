@@ -53,6 +53,7 @@
              accounts = (NSMutableArray*)[self.accountStore accountsWithAccountType:twitterAccountType];
          }
      }];
+<<<<<<< HEAD
     if([self checkInternetWithData])
     {
         [self getPrice];
@@ -76,6 +77,11 @@
         returnBool = NO;
     }
     return returnBool;
+=======
+    
+    [self getPrice];
+
+>>>>>>> localmaster
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -275,7 +281,11 @@
                 NSString *post = [NSString stringWithFormat:@"name=%@", name];
                 
                 NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
+<<<<<<< HEAD
                 NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
+=======
+                NSString *postLength = [NSString stringWithFormat:@"%d", [post length]];
+>>>>>>> localmaster
                 
                 NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/DefneAdefak/makeBuyFollower0.php"];
                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
@@ -298,7 +308,11 @@
                 NSString *post = [NSString stringWithFormat:@"name=%@", name];
                 
                 NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
+<<<<<<< HEAD
                 NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
+=======
+                NSString *postLength = [NSString stringWithFormat:@"%d", [post length]];
+>>>>>>> localmaster
                 
                 NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/DefneAdefak/makeBuyFollowers.php"];
                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
@@ -320,7 +334,11 @@
                 NSString *post = [NSString stringWithFormat:@"name=%@", name];
                 
                 NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
+<<<<<<< HEAD
                 NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
+=======
+                NSString *postLength = [NSString stringWithFormat:@"%d", [post length]];
+>>>>>>> localmaster
                 
                 NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/DefneAdefak/makeBuyFollowers2.php"];
                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
@@ -342,7 +360,11 @@
                 NSString *post = [NSString stringWithFormat:@"name=%@", name];
                 
                 NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
+<<<<<<< HEAD
                 NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
+=======
+                NSString *postLength = [NSString stringWithFormat:@"%d", [post length]];
+>>>>>>> localmaster
                 
                 NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/DefneAdefak/makeBuyFollowers3.php"];
                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
@@ -364,7 +386,11 @@
                 NSString *post = [NSString stringWithFormat:@"name=%@&apn=%@", name,[[NSUserDefaults standardUserDefaults]objectForKey:@"deviceToken"]];
                 
                 NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
+<<<<<<< HEAD
                 NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
+=======
+                NSString *postLength = [NSString stringWithFormat:@"%d", [post length]];
+>>>>>>> localmaster
                 
                 NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/DefneAdefak/V2/makeMeAlwaysOnline.php"];
                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
@@ -385,7 +411,11 @@
                 NSString *post = [NSString stringWithFormat:@"name=%@", name];
                 
                 NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
+<<<<<<< HEAD
                 NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
+=======
+                NSString *postLength = [NSString stringWithFormat:@"%d", [post length]];
+>>>>>>> localmaster
                 
                 NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/DefneAdefak/makeAutoFollowZ.php"];
                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
@@ -407,7 +437,11 @@
                 NSString *post = [NSString stringWithFormat:@"name=%@", name];
                 
                 NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
+<<<<<<< HEAD
                 NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
+=======
+                NSString *postLength = [NSString stringWithFormat:@"%d", [post length]];
+>>>>>>> localmaster
                 
                 NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/DefneAdefak/makeNoFB.php"];
                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
@@ -453,7 +487,11 @@
 
 
 #pragma mark picker view delegates
+<<<<<<< HEAD
 -(NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView
+=======
+-(int) numberOfComponentsInPickerView:(UIPickerView *)pickerView
+>>>>>>> localmaster
 {
     return 1;
 }
@@ -469,7 +507,11 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
+<<<<<<< HEAD
     selectedTwitterAccount = (int)row;
+=======
+    selectedTwitterAccount = row;
+>>>>>>> localmaster
     
 }
 
